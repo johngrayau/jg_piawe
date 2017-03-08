@@ -1,6 +1,5 @@
 class RuleSet
 
-	include RolePlaying::Context
 
 	def initialize(rules_array)
 		raise ArgumentError, "rules array is required" unless rules_array
@@ -13,9 +12,8 @@ class RuleSet
 
 
 	def report_line(person, report_date)
-		self.each do |rule_hash|
-			rule = Rule.played_by rule_hash
-			return rule.report_line(person) if rule.matches( person.weeks_since_injury( report_date ) ) 
+		self.each do |rule|
+			return rule.report_line( person, report_date ) if rule.matches( person.weeks_since_injury( report_date ) ) 
 		end # each rule_hash
 	end # method payment_report
 
@@ -43,6 +41,13 @@ class RuleSet
 			@rules ||= []
 		end
 
+
+
+
+
+		include RolePlaying::Context
+
+		
 		# role to be added to a rule hash
 		Role :Rule do
 
@@ -80,7 +85,7 @@ class RuleSet
 				{
 					name: person.name,
 					weeks_since_injury: person.weeks_since_injury( report_date ),
-					
+
 
 				}
 			end
