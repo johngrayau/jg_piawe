@@ -30,28 +30,28 @@ class Piawe
 
 		def injury_date
 			@injury_date ||= (
-				raise ArgumentError, "person_hash does not have an injuryDate key: #{self.inspect}" unless self.has_key?("injuryDate")
-				raise ArgumentError, "injury date of #{self["injuryDate"]} is not in yyyy/mm/dd format" unless /^\d{4}\/\d{2}\/\d{2}$/ =~ self["injuryDate"]
+				self.has_key?("injuryDate") || (raise ArgumentError, "person_hash does not have an injuryDate key: #{self.inspect}")
+				/^\d{4}\/\d{2}\/\d{2}$/ =~ self["injuryDate"] || (raise ArgumentError, "injury date of #{self["injuryDate"]} is not in yyyy/mm/dd format")
 				Date.parse self["injuryDate"]
 			)
 		end
 
 
 		def name
-			raise ArgumentError, "person_hash does not have an name key: #{self.inspect}" unless self.has_key?("name")
+			self.has_key?("name") || (raise ArgumentError, "person_hash does not have an name key: #{self.inspect}")
 			self["name"]
 		end
 
 
 		def hourly_rate
-			raise ArgumentError, "person_hash does not have an hourlyRate key: #{self.inspect}" unless self.has_key?("hourlyRate")
-			self["name"]
+			self.has_key?("hourlyRate") || (raise ArgumentError, "person_hash does not have an hourlyRate key: #{self.inspect}")
+			self["hourlyRate"]
 		end
 
 
 		def overtime_rate
-			raise ArgumentError, "person_hash does not have an overtimeRate key: #{self.inspect}" unless self.has_key?("overtimeRate")
-			self["name"]
+			self.has_key?("overtimeRate") || (raise ArgumentError, "person_hash does not have an overtimeRate key: #{self.inspect}")
+			self["overtimeRate"]
 		end
 
 

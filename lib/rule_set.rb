@@ -2,12 +2,12 @@ class RuleSet
 
 
 	def initialize(rules_array)
-		raise ArgumentError, "rules array is required" unless rules_array
-		raise ArgumentError, "rules array must contain at least one entry" unless rules_array.size > 0
+		rules_array || (raise ArgumentError, "rules array is required")
+		rules_array.size > 0 || (raise ArgumentError, "rules array must contain at least one entry")
 		rules_array.each do |rule_hash|
 			add(Rule.played_by rule_hash)
 		end
-		raise ArgumentError, "last rule must have a terminating + sign" if rules[-1].end_week
+		rules[-1].end_week.nil? || (raise ArgumentError, "last rule must have a terminating + sign")
 	end
 
 
@@ -26,12 +26,12 @@ class RuleSet
 
 		def add(rule)
 			# check consistency of rule dates
-			raise ArgumentError, "rule #{rules.size + 1} has an end week of #{rule.end_week} that is not later than it's start week of #{rule.start_week}" unless rule.end_week.nil? || rule.end_week > rule.start_week
+			(rule.end_week.nil? || rule.end_week > rule.start_week) || (raise ArgumentError, "rule #{rules.size + 1} has an end week of #{rule.end_week} that is not later than it's start week of #{rule.start_week}")
 			if rules[-1] # we have existing rules, check we are consistent
-				raise ArgumentError, "rule #{rules.size} has a terminating + sign, and should have been the last rule, however there was a subsequent rule" unless rules[-1].end_week
-				raise ArgumentError, "rule #{rules.size} ends at week #{rules[-1].end_week} but rule #{rules.size + 1} starts at week #{rule.start_week} - each rule should start one week after the prior rule ends" unless rule.start_week == rules[-1].end_week + 1
+				rules[-1].end_week || (raise ArgumentError, "rule #{rules.size} has a terminating + sign, and should have been the last rule, however there was a subsequent rule: #{self.inspect}")
+				rule.start_week == rules[-1].end_week + 1 || (raise ArgumentError, "rule #{rules.size} ends at week #{rules[-1].end_week} but rule #{rules.size + 1} starts at week #{rule.start_week} - each rule should start one week after the prior rule ends")
 			else # this should be the first rule - check it's start date
-				raise ArgumentError, "rule 1 should start at week 1, but starts at week #{rule.start_week}" unless 1 == rule.start_week
+				1 == rule.start_week || (raise ArgumentError, "rule 1 should start at week 1, but starts at week #{rule.start_week}")
 			end # if we have existing rules
 			rules << rule
 		end
@@ -47,7 +47,7 @@ class RuleSet
 
 		include RolePlaying::Context
 
-		
+
 		# role to be added to a rule hash
 		Role :Rule do
 
@@ -70,9 +70,11 @@ class RuleSet
 
 
 			def applicable_weeks
-				raise ArgumentError, "rule hash did not have an applicable_weeks key: self.inspect" unless self.has_key["applicableWeeks"]
-				raise ArgumentError, "applicable_weeks key is not in valid format" unless /(^\d+\-\d+$)|(^\d+\+$)/ =~ self["applicableWeeks"]
-				self["applicableWeeks"]
+				@applicable_weeks ||= (
+					self.has_key["applicableWeeks"] || (raise ArgumentError, "rule hash did not have an applicable_weeks key: self.inspect")
+					/(^\d+\-\d+$)|(^\d+\+$)/ =~ self["applicableWeeks"] || (raise ArgumentError, "applicable_weeks key is not in valid format")
+					self["applicableWeeks"]
+				)
 			end
 
 
