@@ -1,4 +1,10 @@
+require 'bigdecimal'
+require 'role_playing'
+
+
 class RuleSet
+
+	include RolePlaying::Context
 
 
 	def initialize(rules_array)
@@ -44,12 +50,8 @@ class RuleSet
 
 
 
-
-		include RolePlaying::Context
-
-
 		# role to be added to a rule hash
-		Role :Rule do
+		role :Rule do
 
 			def start_week
 				@start_week ||= (
@@ -71,10 +73,24 @@ class RuleSet
 
 			def applicable_weeks
 				@applicable_weeks ||= (
-					self.has_key["applicableWeeks"] || (raise ArgumentError, "rule hash did not have an applicable_weeks key: self.inspect")
+					self.has_key?("applicableWeeks") || (raise ArgumentError, "rule hash did not have an applicable_weeks key: self.inspect")
 					/(^\d+\-\d+$)|(^\d+\+$)/ =~ self["applicableWeeks"] || (raise ArgumentError, "applicable_weeks key is not in valid format")
 					self["applicableWeeks"]
 				)
+			end
+
+
+			def percentage_payable
+				self.has_key?("percentagePayable") || (raise ArgumentError, "rule_hash does not have a percentagePayable key: #{self.inspect}")
+				/^[+-]?\d+(\.\d+)?$/ =~ self["percentagePayable"] || (raise ArgumentError, "percentagePayable value for person #{self.name} was not a valid Decimal number - value was #{ self['percentagePayable'] }" )
+				BigDecimal.new self["percentagePayable"].strip
+			end
+
+
+			def overtime_included
+				self.has_key?("overtimeIncluded") || (raise ArgumentError, "rule_hash does not have a overtimeIncluded key: #{self.inspect}")
+				/^(true|false)$/ =~ self["overtimeIncluded"].strip.downcase || (raise ArgumentError, "overtimeIncluded value for person #{self.name} was not true or false - value was #{ self['overtimeIncluded'] }" )
+				"true" == self["overtimeIncluded"].strip.downcase
 			end
 
 
@@ -83,12 +99,26 @@ class RuleSet
 			end
 
 
+			def pay_for_this_week( person )
+				( 
+					person.normal_hours * person.hourly_rate + ( 
+						overtime_included ? person.overtime_hours * person.overtime_rate : 0 
+					) 
+				) * ( percentage_payable / 100 )
+			end
+
+
 			def report_line(person, report_date)
 				{
 					name: person.name,
+					pay_for_this_week: pay_for_this_week( person ),
 					weeks_since_injury: person.weeks_since_injury( report_date ),
-
-
+					hourly_rate: person.hourly_rate,
+					overtime_rate: person.overtime_rate,
+					normal_hours: person.normal_hours,
+					overtime_hours: person.overtime_hours,
+					percentage_payable: percentage_payable,
+					overtime_included: overtime_included
 				}
 			end
 

@@ -1,9 +1,13 @@
 require 'piawe/version'
+require 'rule_set'
 require 'role_playing'
+require 'date'
+require 'bigdecimal'
 
-include RolePlaying::Context
 
 class Piawe
+
+	include RolePlaying::Context
 
 	def initialize( people_array, rules_array, report_date=Date.today )
 		@rules = RuleSet.new rules_array
@@ -33,8 +37,14 @@ class Piawe
 		def injury_date
 			@injury_date ||= (
 				self.has_key?("injuryDate") || (raise ArgumentError, "person_hash does not have an injuryDate key: #{self.inspect}")
-				/^\d{4}\/\d{2}\/\d{2}$/ =~ self["injuryDate"] || (raise ArgumentError, "injury date of #{self["injuryDate"]} is not in yyyy/mm/dd format")
-				Date.parse self["injuryDate"]
+				/^\d{4}\/\d{2}\/\d{2}$/ =~ self["injuryDate"] || (raise ArgumentError, "injury date of #{self["injuryDate"]} is not in yyyy/mm/dd format for person #{self.name}")
+				result = nil
+				begin
+					result = Date.parse self["injuryDate"]
+				rescue ArgumentError => ex
+					raise "injuryDate value for person #{self.name} was not a valid date number - value was #{ self["injuryDate"] }"
+				end
+				result
 			)
 		end
 
@@ -46,14 +56,29 @@ class Piawe
 
 
 		def hourly_rate
-			self.has_key?("hourlyRate") || (raise ArgumentError, "person_hash does not have an hourlyRate key: #{self.inspect}")
-			self["hourlyRate"]
+			get_decimal "hourlyRate"
 		end
 
 
 		def overtime_rate
-			self.has_key?("overtimeRate") || (raise ArgumentError, "person_hash does not have an overtimeRate key: #{self.inspect}")
-			self["overtimeRate"]
+			get_decimal "overtimeRate"
+		end
+
+
+		def normal_hours
+			get_decimal "normal_hours"
+		end
+
+
+		def overtime_hours
+			get_decimal "overtime_hours"
+		end
+
+
+		def get_decimal(key)
+			self.has_key?(key) || (raise ArgumentError, "person_hash does not have an #{key} key: #{self.inspect}")
+			/^[+-]?\d+(\.\d+)?$/ =~ self[key] || (raise ArgumentError, "#{key} value for person #{self.name} was not a valid Decimal number - value was #{ self[key] }" )
+			BigDecimal.new self[key].strip
 		end
 
 

@@ -1,0 +1,7 @@
+{"rules":[
+    {"applicableWeeks": "1-26", "percentagePayable": 90, "overtimeIncluded": true},
+    {"applicableWeeks": "26-52", "percentagePayable": 80, "overtimeIncluded": true},
+    {"applicableWeeks": "53-79", "percentagePayable": 70, "overtimeIncluded": true},
+    {"applicableWeeks": "80-104", "percentagePayable": 60, "overtimeIncluded": false},
+    {"applicableWeeks": "104+", "percentagePayable": 10, "overtimeIncluded": false}
+]}
