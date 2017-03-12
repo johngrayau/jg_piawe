@@ -1,3 +1,8 @@
+require 'piawe/version'
+require 'role_playing'
+
+include RolePlaying::Context
+
 class Piawe
 
 	def initialize( people_array, rules_array, report_date=Date.today )
@@ -17,14 +22,11 @@ class Piawe
 	end # method report
 
 
-	include RolePlaying::Context
-
-
 
 	role :Person do
 
 		def weeks_since_injury(report_date)
-			@weeks_since_injury ||= ( report_date - injury_date) / 7 )
+			@weeks_since_injury ||= ( report_date - injury_date) / 7 
 		end
 
 
