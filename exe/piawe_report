@@ -2,4 +2,10 @@
 
 require 'piawe'
 
-puts Piawe::FileParser.new( ARGV[0], ARGV[1], ARGV.size > 2 ? ARGV[2] : Date.today.strftime('%Y/%m/%d') ).report
+#tosimpletotest
+if [2,3].include? ARGV.size
+	puts Piawe::FileParser.new( ARGV[0], ARGV[1], ARGV.size > 2 ? ARGV[2] : Date.today.strftime('%Y/%m/%d') ).report
+else
+	puts "Usage:"
+	puts "piawe_report peopleFile rulesFile [reportDate]"
+end

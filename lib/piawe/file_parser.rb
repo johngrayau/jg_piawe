@@ -1,16 +1,26 @@
+# Class to read people and rules files and convert them into a PIAWE report
 class Piawe::FileParser
 
+	# Create a new FileParser to generate a PIAWE report from files
+	# 
+  #
+  # ==== Parameters
+  #
+  # * +people_file_name+ - Fully qualified path of the people file
+  # * +rules_file_name+ - Fully qualified path of the rules file
+  # * +report_date_string+ - Report date to use, in YYYY/MM/DD format
 	def initialize( people_file_name, rules_file_name, report_date_string )
 		@people_file_name = people_file_name
 		@rules_file_name = rules_file_name
 		@report_date_string = report_date_string
 	end
 
-
+	# Generate a JSON hash containing the PIAWE report
 	def report
 		JSON.pretty_generate( { piawe_report: Piawe.new( people_array, rules_array ).report( report_date ) } )
 	end
 
+private
 
 	def people_array
 		people_hash["people"] || (raise ArgumentError, "people hash did not contain a people key!")

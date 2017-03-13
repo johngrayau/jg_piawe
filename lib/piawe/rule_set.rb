@@ -1,10 +1,37 @@
 require 'bigdecimal'
 require 'role_playing'
 
-
+# Class to encapsulate a set of PIAWE payment rules
 class Piawe::RuleSet
 
 	include RolePlaying::Context
+
+
+	# Create a new RuleSet to represent the rules contained in a rules array
+	# 
+  #
+  # ==== Parameters
+  #
+  # * +rules_array+ - An array of rule hashes
+  #
+  # ==== Rule Hash
+  #
+  # A rule hash it a Ruby hash that has has the following format:
+  #
+	#   {"rules":[
+	#     {"applicableWeeks": "1-26", "percentagePayable": 90, "overtimeIncluded": true},
+	#     {"applicableWeeks": "26-52", "percentagePayable": 80, "overtimeIncluded": true},
+	#     {"applicableWeeks": "53-79", "percentagePayable": 70, "overtimeIncluded": true},
+	#     {"applicableWeeks": "80-104", "percentagePayable": 60, "overtimeIncluded": false},
+	#     {"applicableWeeks": "104+", "percentagePayable": 10, "overtimeIncluded": false}
+	#   ]}
+	#
+	# * applicableWeeks - A String that indicates the range of injury weeks during which the rule applies - Week 1 starts at the day of the injury, and Week 2 starts on the 7th day after the injury, and so on.  It can have two formats: either a start week and end week joined by a dash, or a start week followed by a plus sign, which indicates the rule should apply to all later weeks as well. The first rule must have a start week of 1, the last rule must use the plus sign syntax, and all intervening rules must have a start week that is one greater than the end week of the preceeding rule.
+	#
+	# * percentagePayable - A Numeric that indicates the percentage of Average Weekly Earnings that are paid when this rule applies.
+	#
+	# * overtimeIncluded - A TrueClass or FalseClass that indicates whether overtime earnings should be considered part of Average Weekly Earnings when this rule applies.
+
 
 
 	def initialize(rules_array)
