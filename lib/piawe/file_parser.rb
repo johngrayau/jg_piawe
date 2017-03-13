@@ -9,6 +9,7 @@ class Piawe::FileParser
   # * +people_file_name+ - Fully qualified path of the people file
   # * +rules_file_name+ - Fully qualified path of the rules file
   # * +report_date_string+ - Report date to use, in YYYY/MM/DD format
+  #
 	def initialize( people_file_name, rules_file_name, report_date_string )
 		@people_file_name = people_file_name
 		@rules_file_name = rules_file_name
