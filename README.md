@@ -15,6 +15,7 @@ And then execute:
     $ bundle
 
 Or install it yourself as:
+
 		$ gem build piawe.gemspec 
     $ gem install jg_piawe-0.1.1.gem
 
