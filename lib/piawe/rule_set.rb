@@ -2,7 +2,7 @@ require 'bigdecimal'
 require 'role_playing'
 
 
-class RuleSet
+class Piawe::RuleSet
 
 	include RolePlaying::Context
 
@@ -20,8 +20,9 @@ class RuleSet
 	def report_line(person, report_date)
 		rules.each do |rule|
 			return rule.report_line( person, report_date ) if rule.matches?( person.weeks_since_injury( report_date ) ) 
-		end # each rule_hash
-		raise "could not find a rule to match person at report date #{report_date.strftime("%Y/%m/%d")}: #{person}"
+		end # each rule
+		# this should not be possible - but putting this here defensively...
+		raise "APPLICATION BUG - A RuleSet EXISTS THAT DOES NOT COVER ALL POSSIBLE DATES!! (Date was #{report_date.strftime('%Y/%m/%d')}, person was #{person.inspect})"
 	end # method payment_report
 
 
@@ -137,7 +138,7 @@ class RuleSet
 
 
 
-end # class RuleSet
+end # class Piawe::RuleSet
 
 
 

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe RuleSet::Rule do
+describe Piawe::RuleSet::Rule do
 
 	let (:valid) do 
-		RuleSet::Rule.played_by ( {
+		Piawe::RuleSet::Rule.played_by ( {
 			"applicableWeeks" 	=> "1-26",
 			"percentagePayable" => 90,
 			"overtimeIncluded" 	=> true
@@ -11,7 +11,7 @@ describe RuleSet::Rule do
 	end
 
 	let (:invalid) do 
-		RuleSet::Rule.played_by ( {
+		Piawe::RuleSet::Rule.played_by ( {
 			"applicableWeeks" 	=> "foo",
 			"percentagePayable" => "bar",
 			"overtimeIncluded" 	=> "baz"
@@ -19,7 +19,7 @@ describe RuleSet::Rule do
 	end
 
 	let (:empty) do 
-		RuleSet::Rule.played_by ( Hash.new )
+		Piawe::RuleSet::Rule.played_by ( Hash.new )
 	end
 	
 	let (:report_date) do 
@@ -38,7 +38,7 @@ describe RuleSet::Rule do
 	end
 
 	let (:overtime_included) do 
-		RuleSet::Rule.played_by ( {
+		Piawe::RuleSet::Rule.played_by ( {
 			"applicableWeeks" 	=> "1-26",
 			"percentagePayable" => 90,
 			"overtimeIncluded" 	=> true
@@ -47,7 +47,7 @@ describe RuleSet::Rule do
 
 
 	let (:overtime_not_included) do 
-		RuleSet::Rule.played_by ( {
+		Piawe::RuleSet::Rule.played_by ( {
 			"applicableWeeks" 	=> "1-26",
 			"percentagePayable" => 60,
 			"overtimeIncluded" 	=> false
@@ -101,12 +101,12 @@ describe RuleSet::Rule do
 	end
 
 
-end # describe RuleSet::Rule
+end # describe Piawe::RuleSet::Rule
 
 
 
 
-describe RuleSet, :private do
+describe Piawe::RuleSet, :private do
 
 	let (:overlapping_rules_array) do
 		[
@@ -173,7 +173,7 @@ describe RuleSet, :private do
 	end
 
 
-	let (:valid) do RuleSet.new( valid_rules_array ); end
+	let (:valid) do Piawe::RuleSet.new( valid_rules_array ); end
 
 	let (:report_date) do 
 		Date.new(2017, 3, 1)
@@ -202,31 +202,31 @@ describe RuleSet, :private do
 	end
 
 	context "given an invalid argument" do
-		it "should raise an exception" do expect { RuleSet.new("foo") }.to raise_error( ArgumentError, /rules array is required - got "foo"/ ); end
+		it "should raise an exception" do expect { Piawe::RuleSet.new("foo") }.to raise_error( ArgumentError, /rules array is required - got "foo"/ ); end
 	end
 
 	context "given an empty argument" do
-		it "should raise an exception" do expect { RuleSet.new( Array.new ) }.to raise_error( ArgumentError, /rules array must contain at least one entry/ ); end
+		it "should raise an exception" do expect { Piawe::RuleSet.new( Array.new ) }.to raise_error( ArgumentError, /rules array must contain at least one entry/ ); end
 	end
 
   context "given an overlapping rules array" do
-  	it "should raise an exception" do expect { RuleSet.new(overlapping_rules_array) }.to raise_error( ArgumentError, /rule 1 ends at week 26 but rule 2 starts at week 26 - each rule should start one week after the prior rule ends/ ); end
+  	it "should raise an exception" do expect { Piawe::RuleSet.new(overlapping_rules_array) }.to raise_error( ArgumentError, /rule 1 ends at week 26 but rule 2 starts at week 26 - each rule should start one week after the prior rule ends/ ); end
   end
 
   context "given a gapped rules array" do
-  	it "should raise an exception" do expect { RuleSet.new(gapped_rules_array) }.to raise_error( ArgumentError, /rule 1 ends at week 26 but rule 2 starts at week 28 - each rule should start one week after the prior rule ends/ ); end
+  	it "should raise an exception" do expect { Piawe::RuleSet.new(gapped_rules_array) }.to raise_error( ArgumentError, /rule 1 ends at week 26 but rule 2 starts at week 28 - each rule should start one week after the prior rule ends/ ); end
   end
 
   context "given an early-terminating rules array" do
-  	it "should raise an exception" do expect { RuleSet.new(early_terminated_rules_array) }.to raise_error( ArgumentError, /rule 3 has a terminating \+ sign, and should have been the last rule, however there was a subsequent rule: #{early_terminated_rules_array[3].inspect}/ ); end
+  	it "should raise an exception" do expect { Piawe::RuleSet.new(early_terminated_rules_array) }.to raise_error( ArgumentError, /rule 3 has a terminating \+ sign, and should have been the last rule, however there was a subsequent rule: #{early_terminated_rules_array[3].inspect}/ ); end
   end
 
   context "given an un-terminated rules array" do
-  	it "should raise an exception" do expect { RuleSet.new(unterminated_rules_array) }.to raise_error( ArgumentError, /last rule must have a terminating \+ sign/ ); end
+  	it "should raise an exception" do expect { Piawe::RuleSet.new(unterminated_rules_array) }.to raise_error( ArgumentError, /last rule must have a terminating \+ sign/ ); end
   end
 
   context "given a late starting rules array" do
-  	it "should raise an exception" do expect { RuleSet.new(late_starting_rules_array) }.to raise_error( ArgumentError, /rule 1 should start at week 1, but starts at week 10/ ); end
+  	it "should raise an exception" do expect { Piawe::RuleSet.new(late_starting_rules_array) }.to raise_error( ArgumentError, /rule 1 should start at week 1, but starts at week 10/ ); end
   end
 
   context "given a valid rules array" do

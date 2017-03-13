@@ -1,5 +1,5 @@
 require 'piawe/version'
-require 'rule_set'
+require 'piawe/rule_set'
 require 'role_playing'
 require 'date'
 require 'bigdecimal'
@@ -10,7 +10,7 @@ class Piawe
 	include RolePlaying::Context
 
 	def initialize( people_array, rules_array )
-		@rules = RuleSet.new rules_array
+		@rules = Piawe::RuleSet.new rules_array
 		@people = people_array.map { |person_hash| Person.played_by(person_hash) }
 	end # initialize
 

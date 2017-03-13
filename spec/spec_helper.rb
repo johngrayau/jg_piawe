@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'simplecov'
 require 'piawe'
-require 'rule_set'
+require 'piawe/rule_set'
 
 
 RSpec.shared_context 'private', private: true do
