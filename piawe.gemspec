@@ -32,6 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "simplecov"
-  spec.add_development_dependency "rspec-context-private"
   spec.add_runtime_dependency "role_playing", ["= 0.1.5"]
 end

@@ -1,12 +1,5 @@
 require 'spec_helper'
 
-describe Piawe do
-  it 'has a version number' do
-    expect(Piawe::VERSION).not_to be nil
-  end
-end
-
-
 
 describe Piawe::Person do
 
@@ -89,4 +82,73 @@ describe Piawe::Person do
 	end
 
 end # describe Piawe::Person
+
+# let (:report_date) do 
+# 	Date.new(2017, 3, 1)
+# end
+
+# let (:people_hash) do
+# 	{"people" => [
+# 	    {"name" => "Ebony Boycott", 				"hourlyRate" => 75.0030, "overtimeRate" => 150.0000, 	"normalHours" => 35.0, "overtimeHours" => 7.3, 	"injuryDate" => "2016/05/01" },
+# 	    {"name" => "Geoff Rainford-Brent", 	"hourlyRate" => 30.1234, "overtimeRate" => 60.3456, 	"normalHours" => 25.0, "overtimeHours" => 10.7, "injuryDate" => "2016/08/04" },
+# 	    {"name" => "Meg Gillespie", 				"hourlyRate" => 50.0000, "overtimeRate" => 100.0000, 	"normalHours" => 37.5, "overtimeHours" => 0.0, 	"injuryDate" => "2015/12/31" },
+# 	    {"name" => "Jason Lanning", 				"hourlyRate" => 40.0055, "overtimeRate" => 90.9876, 	"normalHours" => 40.0, "overtimeHours" => 12.4, "injuryDate" => "2013/01/01" }
+# 	]}
+# end
+
+
+# let (:overlapping_rules_hash) do
+# 	{"rules" =>[
+# 	    {"applicableWeeks" => "1-26",   "percentagePayable" => 90, "overtimeIncluded" => true},
+# 	    {"applicableWeeks" => "26-52",  "percentagePayable" => 80, "overtimeIncluded" => true},
+# 	    {"applicableWeeks" => "53-79",  "percentagePayable" => 70, "overtimeIncluded" => true},
+# 	    {"applicableWeeks" => "80-104", "percentagePayable" => 60, "overtimeIncluded" => false},
+# 	    {"applicableWeeks" => "104+",   "percentagePayable" => 10, "overtimeIncluded" => false}
+# 	]}
+# end
+
+
+# let (:gapped_rules_hash) do
+# 	{"rules" =>[
+# 	    {"applicableWeeks" => "1-26",   "percentagePayable" => 90, "overtimeIncluded" => true},
+# 	    {"applicableWeeks" => "27-52",  "percentagePayable" => 80, "overtimeIncluded" => true},
+# 	    {"applicableWeeks" => "53-79",  "percentagePayable" => 70, "overtimeIncluded" => true},
+# 	    {"applicableWeeks" => "80-104", "percentagePayable" => 60, "overtimeIncluded" => false},
+# 	    {"applicableWeeks" => "105+",   "percentagePayable" => 10, "overtimeIncluded" => false}
+# 	]}
+# end
+
+
+# let (:valid_rules_hash) do
+# 	{"rules" =>[
+# 	    {"applicableWeeks" => "1-26",   "percentagePayable" => 90, "overtimeIncluded" => true},
+# 	    {"applicableWeeks" => "27-52",  "percentagePayable" => 80, "overtimeIncluded" => true},
+# 	    {"applicableWeeks" => "53-79",  "percentagePayable" => 70, "overtimeIncluded" => true},
+# 	    {"applicableWeeks" => "80-104", "percentagePayable" => 60, "overtimeIncluded" => false},
+# 	    {"applicableWeeks" => "105+",   "percentagePayable" => 10, "overtimeIncluded" => false}
+# 	]}
+# end
+
+
+# let (:invalid_piawe) do
+# 	Piawe.new(people_hash, invalid_rules_hash, report_date)
+# end
+
+
+# let (:valid_piawe) do
+# 	Piawe.new(people_hash, valid_rules_hash, report_date)
+# end
+
+
+# describe Piawe do
+#   it 'has a version number' do
+#     expect(Piawe::VERSION).not_to be nil
+#   end
+
+
+#   context "given an invalid_rules_hash" do
+#   	it ""
+#   end
+# end # describe Piawe
+
 
