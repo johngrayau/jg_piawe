@@ -21,6 +21,7 @@ class RuleSet
 		rules.each do |rule|
 			return rule.report_line( person, report_date ) if rule.matches?( person.weeks_since_injury( report_date ) ) 
 		end # each rule_hash
+		raise "could not find a rule to match person at report date #{report_date.strftime("%Y/%m/%d")}: #{person}"
 	end # method payment_report
 
 
@@ -93,18 +94,28 @@ class RuleSet
 				self["overtimeIncluded"]
 			end
 
-
+			# The weeks_since_injury value is interpreted as a statement of which injury week we 
+			# are currently in - the first week commencing at the date of the injury, the second week
+			# commencing 7 days after that date etc.
 			def matches?(weeks_since_injury)
-				(start_week..end_week).cover? weeks_since_injury
+				weeks_since_injury >= (start_week - 1).to_f && # it's after the prior week, i.e. when injured, you are immediately in the first 
+				                                          # week of injury
+				(
+					end_week.nil? ||
+					weeks_since_injury <  end_week.to_f  # it's before the end_week number - i.e. exactly 1 week after an injury,
+				  			                               # you are now into the second week of injury
+				)				                                          
 			end
 
 
 			def pay_for_this_week( person )
-				( 
-					person.normal_hours * person.hourly_rate + ( 
-						overtime_included ? person.overtime_hours * person.overtime_rate : 0 
-					) 
-				) * ( percentage_payable / 100 )
+				(
+					( 
+						person.normal_hours * person.hourly_rate + ( 
+							overtime_included ? person.overtime_hours * person.overtime_rate : 0 
+						) 
+					) * ( percentage_payable / 100 )
+				).round(2)
 			end
 
 
@@ -118,7 +129,7 @@ class RuleSet
 					normal_hours: 			sprintf( "%.2f", person.normal_hours											),
 					overtime_hours: 		sprintf( "%.2f", person.overtime_hours										),
 					percentage_payable: sprintf( "%.2f", percentage_payable												),
-					overtime_included: 	overtime_included
+					overtime_included: 	overtime_included.to_s
 				}
 			end # method report_line
 

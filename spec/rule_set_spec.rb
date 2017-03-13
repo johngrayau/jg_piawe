@@ -79,24 +79,25 @@ describe RuleSet::Rule do
 	end
 
 	context "given a matching weeks-since-injury" do
+		it "should match" do expect( valid.matches?(  0 ) ).to eql(true); end
 		it "should match" do expect( valid.matches?( 10 ) ).to eql(true); end
+		it "should match" do expect( valid.matches?( 25.99999999 ) ).to eql(true); end
 	end
 
 	context "given a non-matching weeks-since-injury" do
-		it "should not match" do expect( valid.matches?( 0  ) ).to eql(false); end
-		it "should not match" do expect( valid.matches?( 27 ) ).to eql(false); end
+		it "should not match" do expect( valid.matches?( 26 ) ).to eql(false); end
 	end
 
 
 	context "given a rule hash with overtime included" do
 		it "calculates the correct pay with overtime" do expect( overtime_included.pay_for_this_week( person 							) 			).to eql( 3037.5 ); end
-		it "creates the correct report line" 					do expect( overtime_included.report_line(				person, report_date	).to_s 	).to eql( '{:name=>"test person", :pay_for_this_week=>"3037.50", :weeks_since_injury=>"10.00", :hourly_rate=>"75.000000", :overtime_rate=>"150.000000", :normal_hours=>"35.00", :overtime_hours=>"5.00", :percentage_payable=>"90.00", :overtime_included=>true}' ); end
+		it "creates the correct report line" 					do expect( overtime_included.report_line(				person, report_date	).to_s 	).to eql( '{:name=>"test person", :pay_for_this_week=>"3037.50", :weeks_since_injury=>"10.00", :hourly_rate=>"75.000000", :overtime_rate=>"150.000000", :normal_hours=>"35.00", :overtime_hours=>"5.00", :percentage_payable=>"90.00", :overtime_included=>"true"}' ); end
 	end
 
 
 	context "given a rule hash with overtime not included" do
 		it "calculates the correct pay without overtime" do expect( overtime_not_included.pay_for_this_week( person ) ).to eql( 1575.0 ); end
-		it "creates the correct report line" 						 do expect( overtime_not_included.report_line(person, report_date	).to_s 	).to eql( '{:name=>"test person", :pay_for_this_week=>"1575.00", :weeks_since_injury=>"10.00", :hourly_rate=>"75.000000", :overtime_rate=>"150.000000", :normal_hours=>"35.00", :overtime_hours=>"5.00", :percentage_payable=>"60.00", :overtime_included=>false}' ); end
+		it "creates the correct report line" 						 do expect( overtime_not_included.report_line(person, report_date	).to_s 	).to eql( '{:name=>"test person", :pay_for_this_week=>"1575.00", :weeks_since_injury=>"10.00", :hourly_rate=>"75.000000", :overtime_rate=>"150.000000", :normal_hours=>"35.00", :overtime_hours=>"5.00", :percentage_payable=>"60.00", :overtime_included=>"false"}' ); end
 	end
 
 
@@ -189,6 +190,17 @@ describe RuleSet, :private do
 		} )
 	end
 
+	let (:person2) do
+		Piawe::Person.played_by (	{
+			"name" =>  "test person 2",
+			"hourlyRate" =>  75.0,
+			"overtimeRate" =>  150.0,
+			"normalHours" =>  35.0,
+			"overtimeHours" =>  5,
+			"injuryDate" =>  (report_date - 10000.weeks).strftime("%Y/%m/%d")
+		} )
+	end
+
 	context "given an invalid argument" do
 		it "should raise an exception" do expect { RuleSet.new("foo") }.to raise_error( ArgumentError, /rules array is required - got "foo"/ ); end
 	end
@@ -223,7 +235,8 @@ describe RuleSet, :private do
   	it "should have the correct end weeks"   					do expect( valid.rules.map(	&:end_week						) ).to match_array( [ 26, 52, 79, 104, nil						] ); end
   	it "should have the correct percentage payables" 	do expect( valid.rules.map(	&:percentage_payable	) ).to match_array( [ 90, 80, 70, 60, 10							] ); end
   	it "should have the correct overtime includeds" 	do expect( valid.rules.map(	&:overtime_included		) ).to match_array( [ true, true, true, false, false	] ); end
-  	it "should return the right report line"					do expect( valid.report_line(person, report_date	).to_s 	).to eql( '{:name=>"test person", :pay_for_this_week=>"1575.00", :weeks_since_injury=>"100.00", :hourly_rate=>"75.000000", :overtime_rate=>"150.000000", :normal_hours=>"35.00", :overtime_hours=>"5.00", :percentage_payable=>"60.00", :overtime_included=>false}' ); end
+  	it "should return the right early report line"		do expect( valid.report_line(person,  report_date	).to_s 	).to eql( '{:name=>"test person", :pay_for_this_week=>"1575.00", :weeks_since_injury=>"100.00", :hourly_rate=>"75.000000", :overtime_rate=>"150.000000", :normal_hours=>"35.00", :overtime_hours=>"5.00", :percentage_payable=>"60.00", :overtime_included=>"false"}' ); end
+  	it "should return the right late report line"		  do expect( valid.report_line(person2, report_date	).to_s 	).to eql( '{:name=>"test person 2", :pay_for_this_week=>"262.50", :weeks_since_injury=>"10000.00", :hourly_rate=>"75.000000", :overtime_rate=>"150.000000", :normal_hours=>"35.00", :overtime_hours=>"5.00", :percentage_payable=>"10.00", :overtime_included=>"false"}' ); end
   end
 
 

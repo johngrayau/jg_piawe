@@ -9,19 +9,16 @@ class Piawe
 
 	include RolePlaying::Context
 
-	def initialize( people_array, rules_array, report_date=Date.today )
+	def initialize( people_array, rules_array )
 		@rules = RuleSet.new rules_array
 		@people = people_array.map { |person_hash| Person.played_by(person_hash) }
-		@report_date = report_date
 	end # initialize
 
 
-	def report
+	def report( report_date=Date.today )
 		{
-			payment_report: {
-				report_date: @report_date,
-				report_lines: @people.map { |person| @rules.payment_report(person, @report_date) }
-			}
+			report_date: report_date.strftime("%Y/%m/%d"),
+			report_lines: @people.map { |person| @rules.report_line(person, report_date) }
 		}
 	end # method report
 
@@ -44,6 +41,7 @@ class Piawe
 				rescue ArgumentError => ex
 					raise ArgumentError, "person_hash has an invalidly formatted injuryDate key: #{self.inspect} }"
 				end
+				result <= Date.today || (raise ArgumentError, "person_hash has an injuryDate value that is in the future: #{self.inspect}")
 				result
 			)
 		end
