@@ -36,13 +36,13 @@ class Piawe
 
 		def injury_date
 			@injury_date ||= (
-				self.has_key?("injuryDate") || (raise ArgumentError, "person_hash does not have an injuryDate key: #{self.inspect}")
-				/^\d{4}\/\d{2}\/\d{2}$/ =~ self["injuryDate"] || (raise ArgumentError, "injury date of #{self["injuryDate"]} is not in yyyy/mm/dd format for person #{self.name}")
+				self.has_key?("injuryDate") || (raise ArgumentError, "person_hash does not have a key of injuryDate: #{self.inspect}")
+				/^\d{4}\/\d{2}\/\d{2}$/ =~ self["injuryDate"] || (raise ArgumentError, "injury date of #{self["injuryDate"]} is not in yyyy/mm/dd format: #{self.inspect}")
 				result = nil
 				begin
 					result = Date.parse self["injuryDate"]
 				rescue ArgumentError => ex
-					raise "injuryDate value for person #{self.name} was not a valid date number - value was #{ self["injuryDate"] }"
+					raise ArgumentError, "person_hash has an invalidly formatted injuryDate key: #{self.inspect} }"
 				end
 				result
 			)
@@ -50,7 +50,8 @@ class Piawe
 
 
 		def name
-			self.has_key?("name") || (raise ArgumentError, "person_hash does not have an name key: #{self.inspect}")
+			self.has_key?("name") || (raise ArgumentError, "person_hash does not have a key of name: #{self.inspect}")
+			self["name"] || (raise ArgumentError, "person_hash has a nil value for name key: #{self.inspect}")
 			self["name"]
 		end
 
@@ -66,19 +67,19 @@ class Piawe
 
 
 		def normal_hours
-			get_decimal "normal_hours"
+			get_decimal "normalHours"
 		end
 
 
 		def overtime_hours
-			get_decimal "overtime_hours"
+			get_decimal "overtimeHours"
 		end
 
 
 		def get_decimal(key)
-			self.has_key?(key) || (raise ArgumentError, "person_hash does not have an #{key} key: #{self.inspect}")
-			/^[+-]?\d+(\.\d+)?$/ =~ self[key] || (raise ArgumentError, "#{key} value for person #{self.name} was not a valid Decimal number - value was #{ self[key] }" )
-			BigDecimal.new self[key].strip
+			self.has_key?(key) || (raise ArgumentError, "person_hash does not have a key of #{key}: #{self.inspect}")
+			self[key].is_a?(Numeric) || (raise ArgumentError, "person_hash has a non-numeric value for #{key} key: #{self.inspect}")
+			BigDecimal.new self[key], 15
 		end
 
 

@@ -82,8 +82,8 @@ class RuleSet
 
 			def percentage_payable
 				self.has_key?("percentagePayable") || (raise ArgumentError, "rule_hash does not have a percentagePayable key: #{self.inspect}")
-				/^[+-]?\d+(\.\d+)?$/ =~ self["percentagePayable"] || (raise ArgumentError, "percentagePayable value for person #{self.name} was not a valid Decimal number - value was #{ self['percentagePayable'] }" )
-				BigDecimal.new self["percentagePayable"].strip
+				self["percentagePayable"].is_a?(Numeric) || (raise ArgumentError, "rule_hash has a non-numeric value for percentagePayable key: #{self.inspect}")
+				BigDecimal.new self["percentagePayable"]
 			end
 
 
