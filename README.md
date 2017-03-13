@@ -37,7 +37,9 @@ The report will be output to stdout.
 
 ## PLEASE NOTE: The rules file provided at https://github.com/DoneSafe/code_test had some invalid applicableWeeks overlaps - testing with that file will result in this Gem rejecting the file with a descriptive exception.
 
-Doc and Coverage reports have been included in the repo for convenience.
+## RDoc and Code Coverage
+
+Doc and Coverage reports have been included in the repo for convenience - they can be found in the doc and coverage directories.
 
 ## Development
 
