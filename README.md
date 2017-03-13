@@ -15,7 +15,7 @@ And then execute:
     $ bundle
 
 Or install it yourself as:
-
+		$ gem build piawe.gemspec 
     $ gem install jg_piawe-0.1.1.gem
 
 ## Usage
@@ -33,6 +33,10 @@ piawe_report ~/workspace/piawe/spec/files/people.json ~/workspace/piawe/spec/fil
 The date parameter is optional - it will default to the current date if omitted.
 
 The report will be output to stdout.
+
+## PLEASE NOTE: The rules file provided at https://github.com/DoneSafe/code_test had some invalid overlaps - testing with that file will result in this Gem rejecting the file with a descriptive exception.
+
+Doc and Coverage reports have been included in the repo for convenience.
 
 ## Development
 
