@@ -1,5 +1,6 @@
 require 'piawe/version'
 require 'piawe/rule_set'
+require 'piawe/file_parser'
 require 'role_playing'
 require 'date'
 require 'bigdecimal'

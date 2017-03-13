@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'piawe'
+
+puts Piawe::FileParser.new( ARGV[0], ARGV[1], ARGV.size > 2 ? ARGV[2] : Date.today.strftime('%Y/%m/%d') ).report
