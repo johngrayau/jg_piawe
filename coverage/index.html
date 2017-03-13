@@ -1,0 +1,5264 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>Code coverage for Piawe</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
+    <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_green.png" />
+    <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
+  </head>
+  
+  <body>
+    <div id="loading">
+      <img src="./assets/0.10.0/loading.gif" alt="loading"/>
+    </div>
+    <div id="wrapper" style="display:none;">
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-13T23:46:44+11:00">2017-03-13T23:46:44+11:00</abbr></div>
+      <ul class="group_tabs"></ul>
+
+      <div id="content">
+        <div class="file_list_container" id="AllFiles">
+  <h2>
+    <span class="group_name">All Files</span>
+    (<span class="covered_percent"><span class="green">99.68%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="green">
+         75.53
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="AllFiles"></a>
+  <div>
+    <b>6</b> files in total.
+    <b>309</b> relevant lines. 
+    <span class="green"><b>308</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#e6adbf86599177c2489df344c4f9888fc77c1a6d" class="src_link" title="lib/piawe.rb">lib/piawe.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>143</td>
+        <td>43</td>
+        <td>43</td>
+        <td>0</td>
+        <td>193.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#5668acbe5452afffb16671aae8622b2efa4d0e64" class="src_link" title="lib/piawe/file_parser.rb">lib/piawe/file_parser.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>67</td>
+        <td>27</td>
+        <td>27</td>
+        <td>0</td>
+        <td>5.4</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#ad6516a5940d9be85d9ab156a28af54c2f4efa88" class="src_link" title="lib/piawe/rule_set.rb">lib/piawe/rule_set.rb</a></td>
+        <td class="green strong">98.28 %</td>
+        <td>179</td>
+        <td>58</td>
+        <td>57</td>
+        <td>1</td>
+        <td>246.6</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#cf35feabf5b16a277515ba29b1e10b08ac0f5c68" class="src_link" title="lib/piawe/version.rb">lib/piawe/version.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#f160f61e6a6ddba2c3866fec93a57a46868d267b" class="src_link" title="spec/piawe_spec.rb">spec/piawe_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>177</td>
+        <td>91</td>
+        <td>91</td>
+        <td>0</td>
+        <td>4.2</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#9cc722130865d61268ed785d5230fe94a7ec4488" class="src_link" title="spec/rule_set_spec.rb">spec/rule_set_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>246</td>
+        <td>88</td>
+        <td>88</td>
+        <td>0</td>
+        <td>2.0</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+
+        
+          <div class="file_list_container" id="lib">
+  <h2>
+    <span class="group_name">lib</span>
+    (<span class="covered_percent"><span class="green">99.23%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="green">
+         175.23
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="lib"></a>
+  <div>
+    <b>4</b> files in total.
+    <b>130</b> relevant lines. 
+    <span class="green"><b>129</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#e6adbf86599177c2489df344c4f9888fc77c1a6d" class="src_link" title="lib/piawe.rb">lib/piawe.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>143</td>
+        <td>43</td>
+        <td>43</td>
+        <td>0</td>
+        <td>193.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#5668acbe5452afffb16671aae8622b2efa4d0e64" class="src_link" title="lib/piawe/file_parser.rb">lib/piawe/file_parser.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>67</td>
+        <td>27</td>
+        <td>27</td>
+        <td>0</td>
+        <td>5.4</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#ad6516a5940d9be85d9ab156a28af54c2f4efa88" class="src_link" title="lib/piawe/rule_set.rb">lib/piawe/rule_set.rb</a></td>
+        <td class="green strong">98.28 %</td>
+        <td>179</td>
+        <td>58</td>
+        <td>57</td>
+        <td>1</td>
+        <td>246.6</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#cf35feabf5b16a277515ba29b1e10b08ac0f5c68" class="src_link" title="lib/piawe/version.rb">lib/piawe/version.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        
+          <div class="file_list_container" id="Ungrouped">
+  <h2>
+    <span class="group_name">Ungrouped</span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="green">
+         3.12
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="Ungrouped"></a>
+  <div>
+    <b>2</b> files in total.
+    <b>179</b> relevant lines. 
+    <span class="green"><b>179</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#f160f61e6a6ddba2c3866fec93a57a46868d267b" class="src_link" title="spec/piawe_spec.rb">spec/piawe_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>177</td>
+        <td>91</td>
+        <td>91</td>
+        <td>0</td>
+        <td>4.2</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#9cc722130865d61268ed785d5230fe94a7ec4488" class="src_link" title="spec/rule_set_spec.rb">spec/rule_set_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>246</td>
+        <td>88</td>
+        <td>88</td>
+        <td>0</td>
+        <td>2.0</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        
+      </div>
+    
+      <div id="footer">
+        Generated by <a href="http://github.com/colszowka/simplecov">simplecov</a> v0.13.0 
+        and simplecov-html v0.10.0<br/>
+        using RSpec
+      </div>
+    
+      <div class="source_files">
+      
+        <div class="source_table" id="e6adbf86599177c2489df344c4f9888fc77c1a6d">
+  <div class="header">
+    <h3>lib/piawe.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>43</b> relevant lines. 
+      <span class="green"><b>43</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;piawe/version&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;piawe/rule_set&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;piawe/file_parser&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;role_playing&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;date&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;bigdecimal&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"># Class to encapsulate PIAWE report generation</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Piawe</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	include RolePlaying::Context</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">	# Create a new Piawe instance to generate reports for a particular set of people and rules</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">	# </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  # ==== Parameters</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  # * +people_array+ - An array of people hashes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  # * +rules_array+ - An array of rule hashes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  # ==== People Hash</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  # A people hash it a Ruby hash that has has the following format:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">	#		{&quot;people&quot;: [</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">	#		    {&quot;name&quot;: &quot;Ebony Boycott&quot;, &quot;hourlyRate&quot;: 75.0030, &quot;overtimeRate&quot;: 150.0000, &quot;normalHours&quot;: 35.0, &quot;overtimeHours&quot;: 7.3, &quot;injuryDate&quot;: &quot;2016/05/01&quot; },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">	#		    {&quot;name&quot;: &quot;Geoff Rainford-Brent&quot;, &quot;hourlyRate&quot;: 30.1234, &quot;overtimeRate&quot;: 60.3456, &quot;normalHours&quot;: 25.0, &quot;overtimeHours&quot;: 10.7, &quot;injuryDate&quot;: &quot;2016/08/04&quot; },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">	#		    {&quot;name&quot;: &quot;Meg Gillespie&quot;, &quot;hourlyRate&quot;: 50.0000, &quot;overtimeRate&quot;: 100.0000, &quot;normalHours&quot;: 37.5, &quot;overtimeHours&quot;: 0.0, &quot;injuryDate&quot;: &quot;2015/12/31&quot; },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">	#		    {&quot;name&quot;: &quot;Jason Lanning&quot;, &quot;hourlyRate&quot;: 40.0055, &quot;overtimeRate&quot;: 90.9876, &quot;normalHours&quot;: 40.0, &quot;overtimeHours&quot;: 12.4, &quot;injuryDate&quot;: &quot;2013/01/01&quot; }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">	#		]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">	# * name - The person&#39;s name.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">	# * hourlyRate - The person&#39;s hourly rate of pay, calculated according to PIAWE rules.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">	# * overtimeRate - The person&#39;s overtime rate of pay, calculated according to PIAWE rules.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">	# * normalHours - The person&#39;s normal weekly hours, calculated according to PIAWE rules.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">	# * overtimeHours - The person&#39;s normal weekly overtime hours, calculated according to PIAWE rules.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">	# * injuryDate - The date of the injury that caused the person to cease work.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">  # ==== Rule Hash</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">  # A rule hash it a Ruby hash that has has the following format:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">	#   {&quot;rules&quot;:[</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;1-26&quot;, &quot;percentagePayable&quot;: 90, &quot;overtimeIncluded&quot;: true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;27-52&quot;, &quot;percentagePayable&quot;: 80, &quot;overtimeIncluded&quot;: true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;53-79&quot;, &quot;percentagePayable&quot;: 70, &quot;overtimeIncluded&quot;: true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;80-104&quot;, &quot;percentagePayable&quot;: 60, &quot;overtimeIncluded&quot;: false},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;105+&quot;, &quot;percentagePayable&quot;: 10, &quot;overtimeIncluded&quot;: false}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">	#   ]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">	# * applicableWeeks - A String that indicates the range of injury weeks during which the rule applies - Week 1 starts at the day of the injury, and Week 2 starts on the 7th day after the injury, and so on.  It can have two formats: either a start week and end week joined by a dash, or a start week followed by a plus sign, which indicates the rule should apply to all later weeks as well. The first rule must have a start week of 1, the last rule must use the plus sign syntax, and all intervening rules must have a start week that is one greater than the end week of the preceeding rule.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">	# * percentagePayable - A Numeric that indicates the percentage of Average Weekly Earnings that are paid when this rule applies.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">	# * overtimeIncluded - A TrueClass or FalseClass that indicates whether overtime earnings should be considered part of Average Weekly Earnings when this rule applies.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def initialize( people_array, rules_array )</code>
+        </li>
+      
+        <li class="covered" data-hits="45" data-linenumber="63">
+          <span class="hits">45</span>
+          
+          <code class="ruby">		@rules = Piawe::RuleSet.new rules_array</code>
+        </li>
+      
+        <li class="covered" data-hits="225" data-linenumber="64">
+          <span class="hits">225</span>
+          
+          <code class="ruby">		@people = people_array.map { |person_hash| Person.played_by(person_hash) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">	end # initialize</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">	# Generate a PIAWE report (Ruby Hash format) for the people and rules this Piawe instance encapsulates, as at the specified report date. </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">  # ==== Parameters</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">  # * +report_date+ - The date for which the report should be generated. Defaults to the current date</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def report( report_date=Date.today )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">		{</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">			report_date: report_date.strftime(&quot;%Y/%m/%d&quot;),</code>
+        </li>
+      
+        <li class="covered" data-hits="168" data-linenumber="77">
+          <span class="hits">168</span>
+          
+          <code class="ruby">			report_lines: @people.map { |person| @rules.report_line(person, report_date) }</code>
+        </li>
+      
+        <li class="covered" data-hits="42" data-linenumber="78">
+          <span class="hits">42</span>
+          
+          <code class="ruby">		}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">	end # method report</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	role :Person do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def weeks_since_injury(report_date) # :nodoc:</code>
+        </li>
+      
+        <li class="covered" data-hits="686" data-linenumber="86">
+          <span class="hits">686</span>
+          
+          <code class="ruby">			@weeks_since_injury ||= ( report_date - injury_date) / 7 </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="90">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def injury_date # :nodoc:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">			@injury_date ||= (</code>
+        </li>
+      
+        <li class="covered" data-hits="177" data-linenumber="92">
+          <span class="hits">177</span>
+          
+          <code class="ruby">				self.has_key?(&quot;injuryDate&quot;) || (raise ArgumentError, &quot;person_hash does not have a key of injuryDate: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="176" data-linenumber="93">
+          <span class="hits">176</span>
+          
+          <code class="ruby">				/^\d{4}\/\d{2}\/\d{2}$/ =~ self[&quot;injuryDate&quot;] || (raise ArgumentError, &quot;injury date of #{self[&quot;injuryDate&quot;]} is not in yyyy/mm/dd format: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="175" data-linenumber="94">
+          <span class="hits">175</span>
+          
+          <code class="ruby">				result = nil</code>
+        </li>
+      
+        <li class="covered" data-hits="175" data-linenumber="95">
+          <span class="hits">175</span>
+          
+          <code class="ruby">				begin</code>
+        </li>
+      
+        <li class="covered" data-hits="175" data-linenumber="96">
+          <span class="hits">175</span>
+          
+          <code class="ruby">					result = Date.parse self[&quot;injuryDate&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">				rescue ArgumentError =&gt; ex</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
+          
+          <code class="ruby">					raise ArgumentError, &quot;person_hash has an invalidly formatted injuryDate key: #{self.inspect} }&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby">				end</code>
+        </li>
+      
+        <li class="covered" data-hits="174" data-linenumber="100">
+          <span class="hits">174</span>
+          
+          <code class="ruby">				result &lt;= Date.today || (raise ArgumentError, &quot;person_hash has an injuryDate value that is in the future: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="174" data-linenumber="101">
+          <span class="hits">174</span>
+          
+          <code class="ruby">				result</code>
+        </li>
+      
+        <li class="covered" data-hits="177" data-linenumber="102">
+          <span class="hits">177</span>
+          
+          <code class="ruby">			)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="105">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def name # :nodoc:</code>
+        </li>
+      
+        <li class="covered" data-hits="176" data-linenumber="107">
+          <span class="hits">176</span>
+          
+          <code class="ruby">			self.has_key?(&quot;name&quot;) || (raise ArgumentError, &quot;person_hash does not have a key of name: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="175" data-linenumber="108">
+          <span class="hits">175</span>
+          
+          <code class="ruby">			self[&quot;name&quot;] || (raise ArgumentError, &quot;person_hash has a nil value for name key: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="173" data-linenumber="109">
+          <span class="hits">173</span>
+          
+          <code class="ruby">			self[&quot;name&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def hourly_rate # :nodoc:</code>
+        </li>
+      
+        <li class="covered" data-hits="350" data-linenumber="114">
+          <span class="hits">350</span>
+          
+          <code class="ruby">			get_decimal &quot;hourlyRate&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="117">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def overtime_rate # :nodoc:</code>
+        </li>
+      
+        <li class="covered" data-hits="304" data-linenumber="119">
+          <span class="hits">304</span>
+          
+          <code class="ruby">			get_decimal &quot;overtimeRate&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="122">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="123">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def normal_hours # :nodoc:</code>
+        </li>
+      
+        <li class="covered" data-hits="350" data-linenumber="124">
+          <span class="hits">350</span>
+          
+          <code class="ruby">			get_decimal &quot;normalHours&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def overtime_hours # :nodoc:</code>
+        </li>
+      
+        <li class="covered" data-hits="304" data-linenumber="129">
+          <span class="hits">304</span>
+          
+          <code class="ruby">			get_decimal &quot;overtimeHours&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="130">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="133">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def get_decimal(key) # :nodoc:</code>
+        </li>
+      
+        <li class="covered" data-hits="1308" data-linenumber="134">
+          <span class="hits">1308</span>
+          
+          <code class="ruby">			self.has_key?(key) || (raise ArgumentError, &quot;person_hash does not have a key of #{key}: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1304" data-linenumber="135">
+          <span class="hits">1304</span>
+          
+          <code class="ruby">			self[key].is_a?(Numeric) || (raise ArgumentError, &quot;person_hash has a non-numeric value for #{key} key: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1296" data-linenumber="136">
+          <span class="hits">1296</span>
+          
+          <code class="ruby">			BigDecimal.new self[key], 15</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="137">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="141">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="142">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby">end # class Piawe</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="5668acbe5452afffb16671aae8622b2efa4d0e64">
+  <div class="header">
+    <h3>lib/piawe/file_parser.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>27</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># Class to read people and rules files and convert them into a PIAWE report</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Piawe::FileParser</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">	# Create a new FileParser to generate a PIAWE report from files</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">	# </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  # ==== Parameters</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  # * +people_file_name+ - Fully qualified path of the people file</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  # * +rules_file_name+ - Fully qualified path of the rules file</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  # * +report_date_string+ - Report date to use, in YYYY/MM/DD format</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def initialize( people_file_name, rules_file_name, report_date_string )</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="14">
+          <span class="hits">11</span>
+          
+          <code class="ruby">		@people_file_name = people_file_name</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="15">
+          <span class="hits">11</span>
+          
+          <code class="ruby">		@rules_file_name = rules_file_name</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="16">
+          <span class="hits">11</span>
+          
+          <code class="ruby">		@report_date_string = report_date_string</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">	# Generate a JSON hash containing the PIAWE report</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def report</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="21">
+          <span class="hits">11</span>
+          
+          <code class="ruby">		JSON.pretty_generate( { piawe_report: Piawe.new( people_array, rules_array ).report( report_date ) } )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def people_array</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="27">
+          <span class="hits">11</span>
+          
+          <code class="ruby">		people_hash[&quot;people&quot;] || (raise ArgumentError, &quot;people hash did not contain a people key!&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def people_hash</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="32">
+          <span class="hits">11</span>
+          
+          <code class="ruby">		JSON.parse people_file.read</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def people_file</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="37">
+          <span class="hits">11</span>
+          
+          <code class="ruby">		File.exist?(@people_file_name) ? File.new(@people_file_name) : (raise ArgumentError, &quot;Could not find file #{@people_file_name}&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def rules_array</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="42">
+          <span class="hits">9</span>
+          
+          <code class="ruby">		rules_hash[&quot;rules&quot;] || (raise ArgumentError, &quot;rules hash did not contain a rules key&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def rules_hash</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="47">
+          <span class="hits">9</span>
+          
+          <code class="ruby">		JSON.parse rules_file.read</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def rules_file</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="52">
+          <span class="hits">9</span>
+          
+          <code class="ruby">		File.exist?(@rules_file_name) ? File.new(@rules_file_name) : (raise ArgumentError, &quot;Could not find file #{@rules_file_name}&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def report_date</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="57">
+          <span class="hits">7</span>
+          
+          <code class="ruby">		/^(?&lt;yyyy&gt;\d{4})\/(?&lt;mm&gt;\d{2})\/(?&lt;dd&gt;\d{2})$/ =~ @report_date_string || (raise ArgumentError, &quot;report_date_string was not in YYYY/MM/DD format&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="58">
+          <span class="hits">6</span>
+          
+          <code class="ruby">		result = nil</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="59">
+          <span class="hits">6</span>
+          
+          <code class="ruby">		begin</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="60">
+          <span class="hits">6</span>
+          
+          <code class="ruby">			result = Date.new(yyyy.to_i, mm.to_i, dd.to_i)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">		rescue ArgumentError =&gt; ex</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="62">
+          <span class="hits">2</span>
+          
+          <code class="ruby">			raise ArgumentError, &quot;report_date_string does not represent a valid date: #{@report_date_string}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="64">
+          <span class="hits">4</span>
+          
+          <code class="ruby">		result</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="ad6516a5940d9be85d9ab156a28af54c2f4efa88">
+  <div class="header">
+    <h3>lib/piawe/rule_set.rb</h3>
+    <h4><span class="green">98.28 %</span> covered</h4>
+    <div>
+      <b>58</b> relevant lines. 
+      <span class="green"><b>57</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;bigdecimal&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;role_playing&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"># Class to encapsulate a set of PIAWE payment rules</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Piawe::RuleSet</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	include RolePlaying::Context</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">	# Create a new RuleSet to represent the rules contained in a rules array</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">	# </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  # ==== Parameters</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  # * +rules_array+ - An array of rule hashes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  # ==== Rule Hash</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  # A rule hash it a Ruby hash that has has the following format:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">	#   {&quot;rules&quot;:[</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;1-26&quot;, &quot;percentagePayable&quot;: 90, &quot;overtimeIncluded&quot;: true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;27-52&quot;, &quot;percentagePayable&quot;: 80, &quot;overtimeIncluded&quot;: true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;53-79&quot;, &quot;percentagePayable&quot;: 70, &quot;overtimeIncluded&quot;: true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;80-104&quot;, &quot;percentagePayable&quot;: 60, &quot;overtimeIncluded&quot;: false},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">	#     {&quot;applicableWeeks&quot;: &quot;105+&quot;, &quot;percentagePayable&quot;: 10, &quot;overtimeIncluded&quot;: false}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">	#   ]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">	# * applicableWeeks - A String that indicates the range of injury weeks during which the rule applies - Week 1 starts at the day of the injury, and Week 2 starts on the 7th day after the injury, and so on.  It can have two formats: either a start week and end week joined by a dash, or a start week followed by a plus sign, which indicates the rule should apply to all later weeks as well. The first rule must have a start week of 1, the last rule must use the plus sign syntax, and all intervening rules must have a start week that is one greater than the end week of the preceeding rule.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">	# * percentagePayable - A Numeric that indicates the percentage of Average Weekly Earnings that are paid when this rule applies.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">	#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">	# * overtimeIncluded - A TrueClass or FalseClass that indicates whether overtime earnings should be considered part of Average Weekly Earnings when this rule applies.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def initialize(rules_array)</code>
+        </li>
+      
+        <li class="covered" data-hits="59" data-linenumber="35">
+          <span class="hits">59</span>
+          
+          <code class="ruby">		rules_array &amp;&amp; rules_array.is_a?(Array) || (raise ArgumentError, &quot;rules array is required - got #{rules_array.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="58" data-linenumber="36">
+          <span class="hits">58</span>
+          
+          <code class="ruby">		rules_array.size &gt; 0 || (raise ArgumentError, &quot;rules array must contain at least one entry&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="57" data-linenumber="37">
+          <span class="hits">57</span>
+          
+          <code class="ruby">		rules_array.each do |rule_hash|</code>
+        </li>
+      
+        <li class="covered" data-hits="273" data-linenumber="38">
+          <span class="hits">273</span>
+          
+          <code class="ruby">			add(Rule.played_by rule_hash)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="covered" data-hits="53" data-linenumber="40">
+          <span class="hits">53</span>
+          
+          <code class="ruby">		rules[-1].end_week.nil? || (raise ArgumentError, &quot;last rule must have a terminating + sign&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">	# Based on the included Rules, generate a report line for a given person at a given report date</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">	# This is included in the RuleSet class for expedience - a cleaner separation of concerns could be </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">	# achieved by factoring this method into a report generator class, that calls a RuleSet.get_rule(person, report_date) method.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">	# </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  # ==== Parameters</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">  # * +person+ - The Piawe::Person for whom the report line should be generated</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">  # * +report_date+ - The Date for which the report line should be generated</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def report_line(person, report_date)</code>
+        </li>
+      
+        <li class="covered" data-hits="170" data-linenumber="56">
+          <span class="hits">170</span>
+          
+          <code class="ruby">		rules.each do |rule|</code>
+        </li>
+      
+        <li class="covered" data-hits="513" data-linenumber="57">
+          <span class="hits">513</span>
+          
+          <code class="ruby">			return rule.report_line( person, report_date ) if rule.matches?( person.weeks_since_injury( report_date ) ) </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">		end # each rule</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">		# this should not be possible - but putting this here defensively...</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="60">
+          
+          
+          <code class="ruby">		raise &quot;APPLICATION BUG - A RuleSet EXISTS THAT DOES NOT COVER ALL POSSIBLE DATES!! (Date was #{report_date.strftime(&#39;%Y/%m/%d&#39;)}, person was #{person.inspect})&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">	end # method payment_report</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def add(rule)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">			# check consistency of rule dates</code>
+        </li>
+      
+        <li class="covered" data-hits="273" data-linenumber="72">
+          <span class="hits">273</span>
+          
+          <code class="ruby">			(rule.end_week.nil? || rule.end_week &gt; rule.start_week) || (raise ArgumentError, &quot;rule #{rules.size + 1} has an end week of #{rule.end_week} that is not later than it&#39;s start week of #{rule.start_week}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="273" data-linenumber="73">
+          <span class="hits">273</span>
+          
+          <code class="ruby">			if rules[-1] # we have existing rules, check we are consistent</code>
+        </li>
+      
+        <li class="covered" data-hits="216" data-linenumber="74">
+          <span class="hits">216</span>
+          
+          <code class="ruby">				rules[-1].end_week || (raise ArgumentError, &quot;rule #{rules.size} has a terminating + sign, and should have been the last rule, however there was a subsequent rule: #{rule.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="215" data-linenumber="75">
+          <span class="hits">215</span>
+          
+          <code class="ruby">				rule.start_week == rules[-1].end_week + 1 || (raise ArgumentError, &quot;rule #{rules.size} ends at week #{rules[-1].end_week} but rule #{rules.size + 1} starts at week #{rule.start_week} - each rule should start one week after the prior rule ends&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">			else # this should be the first rule - check it&#39;s start date</code>
+        </li>
+      
+        <li class="covered" data-hits="57" data-linenumber="77">
+          <span class="hits">57</span>
+          
+          <code class="ruby">				1 == rule.start_week || (raise ArgumentError, &quot;rule 1 should start at week 1, but starts at week #{rule.start_week}&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">			end # if we have existing rules</code>
+        </li>
+      
+        <li class="covered" data-hits="269" data-linenumber="79">
+          <span class="hits">269</span>
+          
+          <code class="ruby">			rules &lt;&lt; rule</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">		end # method add</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		def rules </code>
+        </li>
+      
+        <li class="covered" data-hits="1208" data-linenumber="84">
+          <span class="hits">1208</span>
+          
+          <code class="ruby">			@rules ||= []</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">		# role to be added to a rule hash</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		role :Rule do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			def start_week</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby">				@start_week ||= (</code>
+        </li>
+      
+        <li class="covered" data-hits="280" data-linenumber="95">
+          <span class="hits">280</span>
+          
+          <code class="ruby">					/(?&lt;starting_week&gt;\d+)[+-]/ =~ applicable_weeks</code>
+        </li>
+      
+        <li class="covered" data-hits="278" data-linenumber="96">
+          <span class="hits">278</span>
+          
+          <code class="ruby">					starting_week.to_i</code>
+        </li>
+      
+        <li class="covered" data-hits="1020" data-linenumber="97">
+          <span class="hits">1020</span>
+          
+          <code class="ruby">				)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">			end </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="101">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			def end_week</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">				@end_week ||= if /\+$/ =~ applicable_weeks</code>
+        </li>
+      
+        <li class="covered" data-hits="150" data-linenumber="103">
+          <span class="hits">150</span>
+          
+          <code class="ruby">												nil</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby">											else</code>
+        </li>
+      
+        <li class="covered" data-hits="225" data-linenumber="105">
+          <span class="hits">225</span>
+          
+          <code class="ruby">												( /\d*\-(?&lt;ending_week&gt;\d+)$/ =~ applicable_weeks ) || (raise ArgumentError, &quot;invalid applicableWeeks value: #{applicable_weeks}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="225" data-linenumber="106">
+          <span class="hits">225</span>
+          
+          <code class="ruby">												ending_week.to_i</code>
+        </li>
+      
+        <li class="covered" data-hits="1978" data-linenumber="107">
+          <span class="hits">1978</span>
+          
+          <code class="ruby">											end # if trailing + sign</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">			end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			def applicable_weeks</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby">				@applicable_weeks ||= (</code>
+        </li>
+      
+        <li class="covered" data-hits="283" data-linenumber="113">
+          <span class="hits">283</span>
+          
+          <code class="ruby">					self.has_key?(&quot;applicableWeeks&quot;) || (raise ArgumentError, &quot;rule hash did not have an applicableWeeks key: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="281" data-linenumber="114">
+          <span class="hits">281</span>
+          
+          <code class="ruby">					/(^\d+\-\d+$)|(^\d+\+$)/ =~ self[&quot;applicableWeeks&quot;] || (raise ArgumentError, &quot;applicableWeeks key is not in valid format&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="279" data-linenumber="115">
+          <span class="hits">279</span>
+          
+          <code class="ruby">					self[&quot;applicableWeeks&quot;]</code>
+        </li>
+      
+        <li class="covered" data-hits="882" data-linenumber="116">
+          <span class="hits">882</span>
+          
+          <code class="ruby">				)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="117">
+          
+          
+          <code class="ruby">			end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="118">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			def percentage_payable</code>
+        </li>
+      
+        <li class="covered" data-hits="354" data-linenumber="121">
+          <span class="hits">354</span>
+          
+          <code class="ruby">				self.has_key?(&quot;percentagePayable&quot;) || (raise ArgumentError, &quot;rule_hash does not have a percentagePayable key: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="353" data-linenumber="122">
+          <span class="hits">353</span>
+          
+          <code class="ruby">				self[&quot;percentagePayable&quot;].is_a?(Numeric) || (raise ArgumentError, &quot;rule_hash has a non-numeric value for percentagePayable key: #{self[&#39;percentagePayable&#39;]}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="352" data-linenumber="123">
+          <span class="hits">352</span>
+          
+          <code class="ruby">				BigDecimal.new self[&quot;percentagePayable&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="124">
+          
+          
+          <code class="ruby">			end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="127">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			def overtime_included</code>
+        </li>
+      
+        <li class="covered" data-hits="354" data-linenumber="128">
+          <span class="hits">354</span>
+          
+          <code class="ruby">				self.has_key?(&quot;overtimeIncluded&quot;) || (raise ArgumentError, &quot;rule_hash does not have an overtimeIncluded key: #{self.inspect}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="353" data-linenumber="129">
+          <span class="hits">353</span>
+          
+          <code class="ruby">				( self[&quot;overtimeIncluded&quot;].is_a?(TrueClass) || self[&quot;overtimeIncluded&quot;].is_a?(FalseClass) )  || (raise ArgumentError, &quot;overtimeIncluded value was not a boolean true or false - value was #{ self[&#39;overtimeIncluded&#39;] }&quot; )</code>
+        </li>
+      
+        <li class="covered" data-hits="352" data-linenumber="130">
+          <span class="hits">352</span>
+          
+          <code class="ruby">				self[&quot;overtimeIncluded&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby">			end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby">			# The weeks_since_injury value is interpreted as a statement of which injury week we </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
+          
+          
+          <code class="ruby">			# are currently in - the first week commencing at the date of the injury, the second week</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="135">
+          
+          
+          <code class="ruby">			# commencing 7 days after that date etc.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="136">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			def matches?(weeks_since_injury)</code>
+        </li>
+      
+        <li class="covered" data-hits="517" data-linenumber="137">
+          <span class="hits">517</span>
+          
+          <code class="ruby">				weeks_since_injury &gt;= (start_week - 1).to_f &amp;&amp; # it&#39;s after the prior week, i.e. when injured, you are immediately in the first </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby">				                                          # week of injury</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby">				(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby">					end_week.nil? ||</code>
+        </li>
+      
+        <li class="covered" data-hits="517" data-linenumber="141">
+          <span class="hits">517</span>
+          
+          <code class="ruby">					weeks_since_injury &lt;  end_week.to_f  # it&#39;s before the end_week number - i.e. exactly 1 week after an injury,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="142">
+          
+          
+          <code class="ruby">				  			                               # you are now into the second week of injury</code>
+        </li>
+      
+        <li class="covered" data-hits="517" data-linenumber="143">
+          <span class="hits">517</span>
+          
+          <code class="ruby">				)				                                          </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby">			end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="146">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			def pay_for_this_week( person )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby">				(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">					( </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby">						person.normal_hours * person.hourly_rate + ( </code>
+        </li>
+      
+        <li class="covered" data-hits="174" data-linenumber="151">
+          <span class="hits">174</span>
+          
+          <code class="ruby">							overtime_included ? person.overtime_hours * person.overtime_rate : 0 </code>
+        </li>
+      
+        <li class="covered" data-hits="174" data-linenumber="152">
+          <span class="hits">174</span>
+          
+          <code class="ruby">						) </code>
+        </li>
+      
+        <li class="covered" data-hits="348" data-linenumber="153">
+          <span class="hits">348</span>
+          
+          <code class="ruby">					) * ( percentage_payable / 100 )</code>
+        </li>
+      
+        <li class="covered" data-hits="174" data-linenumber="154">
+          <span class="hits">174</span>
+          
+          <code class="ruby">				).round(2)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby">			end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			def report_line(person, report_date)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby">				{</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="160">
+          
+          
+          <code class="ruby">					name: person.name,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="161">
+          
+          
+          <code class="ruby">					pay_for_this_week: 	sprintf( &quot;%.2f&quot;, pay_for_this_week(					person 			) ),</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby">					weeks_since_injury: sprintf( &quot;%.2f&quot;, person.weeks_since_injury( report_date ) ),</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby">					hourly_rate: 				sprintf( &quot;%.6f&quot;, person.hourly_rate												),</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
+          
+          
+          <code class="ruby">					overtime_rate: 			sprintf( &quot;%.6f&quot;, person.overtime_rate											),</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="165">
+          
+          
+          <code class="ruby">					normal_hours: 			sprintf( &quot;%.2f&quot;, person.normal_hours											),</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="166">
+          
+          
+          <code class="ruby">					overtime_hours: 		sprintf( &quot;%.2f&quot;, person.overtime_hours										),</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="167">
+          
+          
+          <code class="ruby">					percentage_payable: sprintf( &quot;%.2f&quot;, percentage_payable												),</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby">					overtime_included: 	overtime_included.to_s</code>
+        </li>
+      
+        <li class="covered" data-hits="172" data-linenumber="169">
+          <span class="hits">172</span>
+          
+          <code class="ruby">				}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="170">
+          
+          
+          <code class="ruby">			end # method report_line</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="171">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="172">
+          
+          
+          <code class="ruby">		end # role Rule</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="173">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="174">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="176">
+          
+          
+          <code class="ruby">end # class Piawe::RuleSet</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="177">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="178">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="179">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="cf35feabf5b16a277515ba29b1e10b08ac0f5c68">
+  <div class="header">
+    <h3>lib/piawe/version.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Piawe</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  VERSION = &quot;0.1.1&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="f160f61e6a6ddba2c3866fec93a57a46868d267b">
+  <div class="header">
+    <h3>spec/piawe_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>91</b> relevant lines. 
+      <span class="green"><b>91</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;spec_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Piawe::Person do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let (:valid) do</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="7">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    Piawe::Person.played_by ( {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">      &quot;name&quot; =&gt;  &quot;Ebony Boycott&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">      &quot;hourlyRate&quot; =&gt;  75.0030,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">      &quot;overtimeRate&quot; =&gt;  150.0000,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">      &quot;normalHours&quot; =&gt;  35.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">      &quot;overtimeHours&quot; =&gt;  7.3,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">      &quot;injuryDate&quot; =&gt;  &quot;2016/05/01&quot; </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    } )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let (:invalid_format) do</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="18">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    Piawe::Person.played_by ( {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">      &quot;name&quot; =&gt;  nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">      &quot;hourlyRate&quot; =&gt;  &quot;foo&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">      &quot;overtimeRate&quot; =&gt;  &quot;bar&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">      &quot;normalHours&quot; =&gt;  &quot;baz&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">      &quot;overtimeHours&quot; =&gt;  &quot;twelve&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">      &quot;injuryDate&quot; =&gt;  &quot;yesterday&quot; </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">    } )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let (:invalid_values) do</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="29">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    Piawe::Person.played_by ( {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">      &quot;name&quot; =&gt;  nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">      &quot;hourlyRate&quot; =&gt;  nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">      &quot;overtimeRate&quot; =&gt;  nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">      &quot;normalHours&quot; =&gt;  nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">      &quot;overtimeHours&quot; =&gt;  nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">      &quot;injuryDate&quot; =&gt;  &quot;2016/01/50&quot; </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">    } )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let (:empty) do</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="40">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    Piawe::Person.played_by ( Hash.new )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given a valid person_hash&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="45">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;has the correct name&quot;                 do expect(valid.name            ).to eql(&quot;Ebony Boycott&quot;          ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="46">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;has the correct hourly rate&quot;          do expect(valid.hourly_rate     ).to eql( 75.003                  ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="47">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;has the correct overtime rate&quot;        do expect(valid.overtime_rate   ).to eql( 150.0                   ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="48">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;has the correct normal hours&quot;         do expect(valid.normal_hours    ).to eql( 35.0                    ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="49">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;has the correct overtime hours&quot;       do expect(valid.overtime_hours  ).to eql( 7.3                     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="50">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;has the correct injury date&quot;          do expect(valid.injury_date     ).to eql( Date.new(2016, 05, 01)  ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="51">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;calculates the correct injury weeks&quot;  do expect( valid.weeks_since_injury( Date.new(2016, 05, 29) ).to_f ).to eql(4.0) ; end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">  end # given a valid person_hash</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given a person_hash with invalid format&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="56">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the name value&quot;               do expect {invalid_format.name            }.to raise_error( ArgumentError, /person_hash has a nil value for name key: #{                  invalid_format.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="57">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the hourly rate value&quot;        do expect {invalid_format.hourly_rate     }.to raise_error( ArgumentError, /person_hash has a non-numeric value for hourlyRate key: #{    invalid_format.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="58">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the overtime rate value&quot;      do expect {invalid_format.overtime_rate   }.to raise_error( ArgumentError, /person_hash has a non-numeric value for overtimeRate key: #{  invalid_format.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="59">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the normal hours value&quot;       do expect {invalid_format.normal_hours    }.to raise_error( ArgumentError, /person_hash has a non-numeric value for normalHours key: #{   invalid_format.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="60">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the overtime hours value&quot;     do expect {invalid_format.overtime_hours  }.to raise_error( ArgumentError, /person_hash has a non-numeric value for overtimeHours key: #{ invalid_format.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="61">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the injury date value&quot;        do expect {invalid_format.injury_date     }.to raise_error( ArgumentError, /injury date of yesterday is not in yyyy\/mm\/dd format: #{    invalid_format.inspect}/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given a person_hash with invalid_values&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="66">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the name value&quot;               do expect {invalid_values.name            }.to raise_error( ArgumentError, /person_hash has a nil value for name key: #{                  invalid_values.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="67">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the hourly rate value&quot;        do expect {invalid_values.hourly_rate     }.to raise_error( ArgumentError, /person_hash has a non-numeric value for hourlyRate key: #{    invalid_values.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="68">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the overtime rate value&quot;      do expect {invalid_values.overtime_rate   }.to raise_error( ArgumentError, /person_hash has a non-numeric value for overtimeRate key: #{  invalid_values.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="69">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the normal hours value&quot;       do expect {invalid_values.normal_hours    }.to raise_error( ArgumentError, /person_hash has a non-numeric value for normalHours key: #{   invalid_values.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="70">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the overtime hours value&quot;     do expect {invalid_values.overtime_hours  }.to raise_error( ArgumentError, /person_hash has a non-numeric value for overtimeHours key: #{ invalid_values.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="71">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the injury date value&quot;        do expect {invalid_values.injury_date     }.to raise_error( ArgumentError, /person_hash has an invalidly formatted injuryDate key: #{     invalid_values.inspect}/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given an empty person_hash&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="76">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the name value&quot;               do expect {empty.name           }.to raise_error( ArgumentError, /person_hash does not have a key of name: #{           empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="77">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the hourly rate value&quot;        do expect {empty.hourly_rate    }.to raise_error( ArgumentError, /person_hash does not have a key of hourlyRate: #{     empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="78">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the overtime rate value&quot;      do expect {empty.overtime_rate  }.to raise_error( ArgumentError, /person_hash does not have a key of overtimeRate: #{   empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="79">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the normal hours value&quot;       do expect {empty.normal_hours   }.to raise_error( ArgumentError, /person_hash does not have a key of normalHours: #{    empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="80">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the overtime hours value&quot;     do expect {empty.overtime_hours }.to raise_error( ArgumentError, /person_hash does not have a key of overtimeHours: #{  empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="81">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    it &quot;rejects the injury date value&quot;        do expect {empty.injury_date    }.to raise_error( ArgumentError, /person_hash does not have a key of injuryDate: #{     empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby">end # describe Piawe::Person</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Piawe do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let (:report_date) do </code>
+        </li>
+      
+        <li class="covered" data-hits="38" data-linenumber="92">
+          <span class="hits">38</span>
+          
+          <code class="ruby">    Date.new(2017, 3, 1)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="95">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let (:people_array) do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">    [</code>
+        </li>
+      
+        <li class="covered" data-hits="38" data-linenumber="97">
+          <span class="hits">38</span>
+          
+          <code class="ruby">      {&quot;name&quot; =&gt; &quot;Ebony Boycott&quot;,         &quot;hourlyRate&quot; =&gt; 75.0030, &quot;overtimeRate&quot; =&gt; 150.0000,  &quot;normalHours&quot; =&gt; 35.0, &quot;overtimeHours&quot; =&gt; 7.3,  &quot;injuryDate&quot; =&gt; &quot;2016/05/01&quot; }, # 43.42857142857143</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">      {&quot;name&quot; =&gt; &quot;Geoff Rainford-Brent&quot;,  &quot;hourlyRate&quot; =&gt; 30.1234, &quot;overtimeRate&quot; =&gt; 60.3456,   &quot;normalHours&quot; =&gt; 25.0, &quot;overtimeHours&quot; =&gt; 10.7, &quot;injuryDate&quot; =&gt; &quot;2016/08/04&quot; }, # 29.857142857142858</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby">      {&quot;name&quot; =&gt; &quot;Meg Gillespie&quot;,         &quot;hourlyRate&quot; =&gt; 50.0000, &quot;overtimeRate&quot; =&gt; 100.0000,  &quot;normalHours&quot; =&gt; 37.5, &quot;overtimeHours&quot; =&gt; 0.0,  &quot;injuryDate&quot; =&gt; &quot;2015/12/31&quot; }, # 60.857142857142854</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby">      {&quot;name&quot; =&gt; &quot;Jason Lanning&quot;,         &quot;hourlyRate&quot; =&gt; 40.0055, &quot;overtimeRate&quot; =&gt; 90.9876,   &quot;normalHours&quot; =&gt; 40.0, &quot;overtimeHours&quot; =&gt; 12.4, &quot;injuryDate&quot; =&gt; &quot;2013/01/01&quot; }  # 217.14285714285714</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">    ]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let (:rules_array) do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="106">
+          
+          
+          <code class="ruby">    [</code>
+        </li>
+      
+        <li class="covered" data-hits="38" data-linenumber="107">
+          <span class="hits">38</span>
+          
+          <code class="ruby">      {&quot;applicableWeeks&quot; =&gt; &quot;1-26&quot;,   &quot;percentagePayable&quot; =&gt; 90, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">      {&quot;applicableWeeks&quot; =&gt; &quot;27-52&quot;,  &quot;percentagePayable&quot; =&gt; 80, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">      {&quot;applicableWeeks&quot; =&gt; &quot;53-79&quot;,  &quot;percentagePayable&quot; =&gt; 70, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby">      {&quot;applicableWeeks&quot; =&gt; &quot;80-104&quot;, &quot;percentagePayable&quot; =&gt; 60, &quot;overtimeIncluded&quot; =&gt; false},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby">      {&quot;applicableWeeks&quot; =&gt; &quot;105+&quot;,   &quot;percentagePayable&quot; =&gt; 10, &quot;overtimeIncluded&quot; =&gt; false}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby">    ]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let (:piawe) do</code>
+        </li>
+      
+        <li class="covered" data-hits="38" data-linenumber="117">
+          <span class="hits">38</span>
+          
+          <code class="ruby">    Piawe.new(people_array, rules_array)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="118">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="121">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let (:report) do</code>
+        </li>
+      
+        <li class="covered" data-hits="38" data-linenumber="122">
+          <span class="hits">38</span>
+          
+          <code class="ruby">    piawe.report(report_date)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="124">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="125">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;has a version number&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="126">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(Piawe::VERSION).not_to be nil</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="128">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="129">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given valid arguments, the report&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="131">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct date&quot;               do expect( report[:report_date]       ).to eql( report_date.strftime(&quot;%Y/%m/%d&quot;)); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="132">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct number of lines&quot;    do expect( report[:report_lines].size ).to eql( 4                               ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="134">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct name for person 1&quot;                do expect( report[:report_lines][0][:name               ] ).to eql(people_array[0][&quot;name&quot;]); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="135">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct pay for person 1&quot;                 do expect( report[:report_lines][0][:pay_for_this_week  ] ).to eql( &quot;2976.08&quot;   ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="136">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct weeks_since_injury for person 1&quot;  do expect( report[:report_lines][0][:weeks_since_injury ] ).to eql( &quot;43.43&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="137">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct hourly rate for person 1&quot;         do expect( report[:report_lines][0][:hourly_rate        ] ).to eql( &quot;75.003000&quot; ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="138">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime rate for person 1&quot;       do expect( report[:report_lines][0][:overtime_rate      ] ).to eql( &quot;150.000000&quot;); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="139">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct normal hours for person 1&quot;        do expect( report[:report_lines][0][:normal_hours       ] ).to eql( &quot;35.00&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="140">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime hours for person 1&quot;      do expect( report[:report_lines][0][:overtime_hours     ] ).to eql( &quot;7.30&quot;      ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="141">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct percentage_payable for person 1&quot;  do expect( report[:report_lines][0][:percentage_payable ] ).to eql( &quot;80.00&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="142">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime_included for person 1&quot;   do expect( report[:report_lines][0][:overtime_included  ] ).to eql( &quot;true&quot;      ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="144">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct name for person 2&quot;                do expect( report[:report_lines][1][:name               ] ).to eql(people_array[1][&quot;name&quot;]); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="145">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct pay for person 2&quot;                 do expect( report[:report_lines][1][:pay_for_this_week  ] ).to eql( &quot;1119.03&quot;   ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="146">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct weeks_since_injury for person 2&quot;  do expect( report[:report_lines][1][:weeks_since_injury ] ).to eql( &quot;29.86&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="147">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct hourly rate for person 2&quot;         do expect( report[:report_lines][1][:hourly_rate        ] ).to eql( &quot;30.123400&quot; ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="148">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime rate for person 2&quot;       do expect( report[:report_lines][1][:overtime_rate      ] ).to eql( &quot;60.345600&quot; ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="149">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct normal hours for person 2&quot;        do expect( report[:report_lines][1][:normal_hours       ] ).to eql( &quot;25.00&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="150">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime hours for person 2&quot;      do expect( report[:report_lines][1][:overtime_hours     ] ).to eql( &quot;10.70&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="151">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct percentage_payable for person 2&quot;  do expect( report[:report_lines][1][:percentage_payable ] ).to eql( &quot;80.00&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="152">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime_included for person 2&quot;   do expect( report[:report_lines][1][:overtime_included  ] ).to eql( &quot;true&quot;      ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="154">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct name for person 3&quot;                do expect( report[:report_lines][2][:name               ] ).to eql(people_array[2][&quot;name&quot;]); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="155">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct pay for person 3&quot;                 do expect( report[:report_lines][2][:pay_for_this_week  ] ).to eql( &quot;1312.50&quot;   ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="156">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct weeks_since_injury for person 3&quot;  do expect( report[:report_lines][2][:weeks_since_injury ] ).to eql( &quot;60.86&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="157">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct hourly rate for person 3&quot;         do expect( report[:report_lines][2][:hourly_rate        ] ).to eql( &quot;50.000000&quot; ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="158">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime rate for person 3&quot;       do expect( report[:report_lines][2][:overtime_rate      ] ).to eql( &quot;100.000000&quot;); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="159">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct normal hours for person 3&quot;        do expect( report[:report_lines][2][:normal_hours       ] ).to eql( &quot;37.50&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="160">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime hours for person 3&quot;      do expect( report[:report_lines][2][:overtime_hours     ] ).to eql( &quot;0.00&quot;      ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="161">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct percentage_payable for person 3&quot;  do expect( report[:report_lines][2][:percentage_payable ] ).to eql( &quot;70.00&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="162">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime_included for person 3&quot;   do expect( report[:report_lines][2][:overtime_included  ] ).to eql( &quot;true&quot;      ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="164">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct name for person 4&quot;                do expect( report[:report_lines][3][:name               ] ).to eql(people_array[3][&quot;name&quot;]); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="165">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct pay for person 4&quot;                 do expect( report[:report_lines][3][:pay_for_this_week  ] ).to eql( &quot;160.02&quot;    ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="166">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct weeks_since_injury for person 4&quot;  do expect( report[:report_lines][3][:weeks_since_injury ] ).to eql( &quot;217.14&quot;    ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="167">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct hourly rate for person 4&quot;         do expect( report[:report_lines][3][:hourly_rate        ] ).to eql( &quot;40.005500&quot; ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="168">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime rate for person 4&quot;       do expect( report[:report_lines][3][:overtime_rate      ] ).to eql( &quot;90.987600&quot; ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="169">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct normal hours for person 4&quot;        do expect( report[:report_lines][3][:normal_hours       ] ).to eql( &quot;40.00&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="170">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime hours for person 4&quot;      do expect( report[:report_lines][3][:overtime_hours     ] ).to eql( &quot;12.40&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="171">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct percentage_payable for person 4&quot;  do expect( report[:report_lines][3][:percentage_payable ] ).to eql( &quot;10.00&quot;     ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="172">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it &quot;should have the correct overtime_included for person 4&quot;   do expect( report[:report_lines][3][:overtime_included  ] ).to eql( &quot;false&quot;     ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="173">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="174">
+          
+          
+          <code class="ruby">end # describe Piawe</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="176">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="177">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="9cc722130865d61268ed785d5230fe94a7ec4488">
+  <div class="header">
+    <h3>spec/rule_set_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>88</b> relevant lines. 
+      <span class="green"><b>88</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;spec_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Piawe::RuleSet::Rule do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:valid) do </code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="6">
+          <span class="hits">8</span>
+          
+          <code class="ruby">		Piawe::RuleSet::Rule.played_by ( {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">			&quot;applicableWeeks&quot; 	=&gt; &quot;1-26&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">			&quot;percentagePayable&quot; =&gt; 90,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">			&quot;overtimeIncluded&quot; 	=&gt; true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">		} )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:invalid) do </code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="14">
+          <span class="hits">4</span>
+          
+          <code class="ruby">		Piawe::RuleSet::Rule.played_by ( {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">			&quot;applicableWeeks&quot; 	=&gt; &quot;foo&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">			&quot;percentagePayable&quot; =&gt; &quot;bar&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">			&quot;overtimeIncluded&quot; 	=&gt; &quot;baz&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">		} )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:empty) do </code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="22">
+          <span class="hits">4</span>
+          
+          <code class="ruby">		Piawe::RuleSet::Rule.played_by ( Hash.new )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">	</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:report_date) do </code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="26">
+          <span class="hits">4</span>
+          
+          <code class="ruby">		Date.new(2017, 3, 1)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:person) do</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="30">
+          <span class="hits">4</span>
+          
+          <code class="ruby">		Piawe::Person.played_by (	{</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">			&quot;name&quot; =&gt;  &quot;test person&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">			&quot;hourlyRate&quot; =&gt;  75.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">			&quot;overtimeRate&quot; =&gt;  150.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">			&quot;normalHours&quot; =&gt;  35.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">			&quot;overtimeHours&quot; =&gt;  5,</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="36">
+          <span class="hits">4</span>
+          
+          <code class="ruby">			&quot;injuryDate&quot; =&gt;  (report_date - 10.weeks).strftime(&quot;%Y/%m/%d&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">		} )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:overtime_included) do </code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="41">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		Piawe::RuleSet::Rule.played_by ( {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">			&quot;applicableWeeks&quot; 	=&gt; &quot;1-26&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">			&quot;percentagePayable&quot; =&gt; 90,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">			&quot;overtimeIncluded&quot; 	=&gt; true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">		} )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:overtime_not_included) do </code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="50">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		Piawe::RuleSet::Rule.played_by ( {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">			&quot;applicableWeeks&quot; 	=&gt; &quot;1-26&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">			&quot;percentagePayable&quot; =&gt; 60,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">			&quot;overtimeIncluded&quot; 	=&gt; false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">		} )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;given a valid rule_hash&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="59">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;has the correct start week&quot; 				do expect( valid.start_week 				).to eql(	1 		); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="60">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;has the correct end week&quot;   				do expect( valid.end_week   				).to eql(	26		); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="61">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;has the correct percentage payable&quot; do expect( valid.percentage_payable	).to eql(	90		); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="62">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;has the correct overtime included&quot; 	do expect( valid.overtime_included 	).to eql(	true  ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;given an invalid rule_hash&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="67">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;rejects the invalid start week value&quot; 				do expect{ invalid.start_week 			  }.to raise_error( ArgumentError, /applicableWeeks key is not in valid format/																													); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="68">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;rejects the invalid end week value&quot;   				do expect{ invalid.end_week   				}.to raise_error( ArgumentError, /applicableWeeks key is not in valid format/																								 					); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="69">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;rejects the invalid percentage payable value&quot; do expect{ invalid.percentage_payable	}.to raise_error( ArgumentError, /rule_hash has a non-numeric value for percentagePayable key: #{invalid[&#39;percentagePayable&#39;]}/				); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="70">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;rejects the invalid overtime included value&quot; 	do expect{ invalid.overtime_included 	}.to raise_error( ArgumentError, /overtimeIncluded value was not a boolean true or false - value was #{ invalid[&#39;overtimeIncluded&#39;] }/); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;given an empty rule_hash&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="75">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;rejects the missing start week value&quot; 				do expect{ empty.start_week 			  }.to raise_error( ArgumentError, /rule hash did not have an applicableWeeks key: #{  empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="76">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;rejects the missing end week value&quot;   				do expect{ empty.end_week   				}.to raise_error( ArgumentError, /rule hash did not have an applicableWeeks key: #{  empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="77">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;rejects the missing percentage payable value&quot; do expect{ empty.percentage_payable	}.to raise_error( ArgumentError, /rule_hash does not have a percentagePayable key: #{empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="78">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;rejects the missing overtime included value&quot; 	do expect{ empty.overtime_included 	}.to raise_error( ArgumentError, /rule_hash does not have an overtimeIncluded key: #{empty.inspect}/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;given a matching weeks-since-injury&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="82">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;should match&quot; do expect( valid.matches?(  0 ) ).to eql(true); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="83">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;should match&quot; do expect( valid.matches?( 10 ) ).to eql(true); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="84">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;should match&quot; do expect( valid.matches?( 25.99999999 ) ).to eql(true); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;given a non-matching weeks-since-injury&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="88">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;should not match&quot; do expect( valid.matches?( 26 ) ).to eql(false); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="92">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;given a rule hash with overtime included&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="93">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;calculates the correct pay with overtime&quot; do expect( overtime_included.pay_for_this_week( person 							) 			).to eql( 3037.5 ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="94">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;creates the correct report line&quot; 					do expect( overtime_included.report_line(				person, report_date	).to_s 	).to eql( &#39;{:name=&gt;&quot;test person&quot;, :pay_for_this_week=&gt;&quot;3037.50&quot;, :weeks_since_injury=&gt;&quot;10.00&quot;, :hourly_rate=&gt;&quot;75.000000&quot;, :overtime_rate=&gt;&quot;150.000000&quot;, :normal_hours=&gt;&quot;35.00&quot;, :overtime_hours=&gt;&quot;5.00&quot;, :percentage_payable=&gt;&quot;90.00&quot;, :overtime_included=&gt;&quot;true&quot;}&#39; ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;given a rule hash with overtime not included&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="99">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;calculates the correct pay without overtime&quot; do expect( overtime_not_included.pay_for_this_week( person ) ).to eql( 1575.0 ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="100">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it &quot;creates the correct report line&quot; 						 do expect( overtime_not_included.report_line(person, report_date	).to_s 	).to eql( &#39;{:name=&gt;&quot;test person&quot;, :pay_for_this_week=&gt;&quot;1575.00&quot;, :weeks_since_injury=&gt;&quot;10.00&quot;, :hourly_rate=&gt;&quot;75.000000&quot;, :overtime_rate=&gt;&quot;150.000000&quot;, :normal_hours=&gt;&quot;35.00&quot;, :overtime_hours=&gt;&quot;5.00&quot;, :percentage_payable=&gt;&quot;60.00&quot;, :overtime_included=&gt;&quot;false&quot;}&#39; ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby">end # describe Piawe::RuleSet::Rule</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="105">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="106">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="107">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="109">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Piawe::RuleSet, :private do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:overlapping_rules_array) do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby">		[</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;1-26&quot;,   &quot;percentagePayable&quot; =&gt; 90, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;26-52&quot;,  &quot;percentagePayable&quot; =&gt; 80, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;53-79&quot;,  &quot;percentagePayable&quot; =&gt; 70, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;80-104&quot;, &quot;percentagePayable&quot; =&gt; 60, &quot;overtimeIncluded&quot; =&gt; false},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="117">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;104+&quot;,   &quot;percentagePayable&quot; =&gt; 10, &quot;overtimeIncluded&quot; =&gt; false}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="118">
+          
+          
+          <code class="ruby">		]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:gapped_rules_array) do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">		[</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="124">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;1-26&quot;,   &quot;percentagePayable&quot; =&gt; 90, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;28-52&quot;,  &quot;percentagePayable&quot; =&gt; 80, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;53-79&quot;,  &quot;percentagePayable&quot; =&gt; 70, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;80-104&quot;, &quot;percentagePayable&quot; =&gt; 60, &quot;overtimeIncluded&quot; =&gt; false},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="128">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;105+&quot;,   &quot;percentagePayable&quot; =&gt; 10, &quot;overtimeIncluded&quot; =&gt; false}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="129">
+          
+          
+          <code class="ruby">		]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="130">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="133">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:early_terminated_rules_array) do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
+          
+          
+          <code class="ruby">		[</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="135">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;1-26&quot;,   &quot;percentagePayable&quot; =&gt; 90, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;27-52&quot;,  &quot;percentagePayable&quot; =&gt; 80, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="137">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;53+&quot;,  &quot;percentagePayable&quot; =&gt; 70, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;80-104&quot;, &quot;percentagePayable&quot; =&gt; 60, &quot;overtimeIncluded&quot; =&gt; false},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;105+&quot;,   &quot;percentagePayable&quot; =&gt; 10, &quot;overtimeIncluded&quot; =&gt; false}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby">		]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="141">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="142">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:unterminated_rules_array) do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby">		[</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;1-26&quot;,   &quot;percentagePayable&quot; =&gt; 90, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="147">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;27-52&quot;,  &quot;percentagePayable&quot; =&gt; 80, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;53-79&quot;,  &quot;percentagePayable&quot; =&gt; 70, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;80-104&quot;, &quot;percentagePayable&quot; =&gt; 60, &quot;overtimeIncluded&quot; =&gt; false}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby">		]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="154">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:late_starting_rules_array) do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby">		[</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="156">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;10-26&quot;,  &quot;percentagePayable&quot; =&gt; 90, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;27-52&quot;,  &quot;percentagePayable&quot; =&gt; 80, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;53-79&quot;,  &quot;percentagePayable&quot; =&gt; 70, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;80-104&quot;, &quot;percentagePayable&quot; =&gt; 60, &quot;overtimeIncluded&quot; =&gt; false},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="160">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;105+&quot;,   &quot;percentagePayable&quot; =&gt; 10, &quot;overtimeIncluded&quot; =&gt; false}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="161">
+          
+          
+          <code class="ruby">		]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:valid_rules_array) do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="166">
+          
+          
+          <code class="ruby">		[</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="167">
+          <span class="hits">7</span>
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;1-26&quot;,   &quot;percentagePayable&quot; =&gt; 90, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;27-52&quot;,  &quot;percentagePayable&quot; =&gt; 80, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="169">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;53-79&quot;,  &quot;percentagePayable&quot; =&gt; 70, &quot;overtimeIncluded&quot; =&gt; true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="170">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;80-104&quot;, &quot;percentagePayable&quot; =&gt; 60, &quot;overtimeIncluded&quot; =&gt; false},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="171">
+          
+          
+          <code class="ruby">	    {&quot;applicableWeeks&quot; =&gt; &quot;105+&quot;,   &quot;percentagePayable&quot; =&gt; 10, &quot;overtimeIncluded&quot; =&gt; false}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="172">
+          
+          
+          <code class="ruby">		]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="173">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="174">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="176">
+          <span class="hits">8</span>
+          
+          <code class="ruby">	let (:valid) do Piawe::RuleSet.new( valid_rules_array ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="177">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="178">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:report_date) do </code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="179">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		Date.new(2017, 3, 1)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="180">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="181">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="182">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:person) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="183">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		Piawe::Person.played_by (	{</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="184">
+          
+          
+          <code class="ruby">			&quot;name&quot; =&gt;  &quot;test person&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="185">
+          
+          
+          <code class="ruby">			&quot;hourlyRate&quot; =&gt;  75.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="186">
+          
+          
+          <code class="ruby">			&quot;overtimeRate&quot; =&gt;  150.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="187">
+          
+          
+          <code class="ruby">			&quot;normalHours&quot; =&gt;  35.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="188">
+          
+          
+          <code class="ruby">			&quot;overtimeHours&quot; =&gt;  5,</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="189">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			&quot;injuryDate&quot; =&gt;  (report_date - 100.weeks).strftime(&quot;%Y/%m/%d&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="190">
+          
+          
+          <code class="ruby">		} )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="191">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="192">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="193">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	let (:person2) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="194">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		Piawe::Person.played_by (	{</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="195">
+          
+          
+          <code class="ruby">			&quot;name&quot; =&gt;  &quot;test person 2&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="196">
+          
+          
+          <code class="ruby">			&quot;hourlyRate&quot; =&gt;  75.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="197">
+          
+          
+          <code class="ruby">			&quot;overtimeRate&quot; =&gt;  150.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="198">
+          
+          
+          <code class="ruby">			&quot;normalHours&quot; =&gt;  35.0,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="199">
+          
+          
+          <code class="ruby">			&quot;overtimeHours&quot; =&gt;  5,</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="200">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			&quot;injuryDate&quot; =&gt;  (report_date - 10000.weeks).strftime(&quot;%Y/%m/%d&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="201">
+          
+          
+          <code class="ruby">		} )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="202">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="203">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="204">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;given an invalid argument&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="205">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;should raise an exception&quot; do expect { Piawe::RuleSet.new(&quot;foo&quot;) }.to raise_error( ArgumentError, /rules array is required - got &quot;foo&quot;/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="206">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="207">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="208">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;given an empty argument&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="209">
+          <span class="hits">3</span>
+          
+          <code class="ruby">		it &quot;should raise an exception&quot; do expect { Piawe::RuleSet.new( Array.new ) }.to raise_error( ArgumentError, /rules array must contain at least one entry/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="210">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="211">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="212">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given an overlapping rules array&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="213">
+          <span class="hits">3</span>
+          
+          <code class="ruby">  	it &quot;should raise an exception&quot; do expect { Piawe::RuleSet.new(overlapping_rules_array) }.to raise_error( ArgumentError, /rule 1 ends at week 26 but rule 2 starts at week 26 - each rule should start one week after the prior rule ends/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="214">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="215">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="216">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given a gapped rules array&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="217">
+          <span class="hits">3</span>
+          
+          <code class="ruby">  	it &quot;should raise an exception&quot; do expect { Piawe::RuleSet.new(gapped_rules_array) }.to raise_error( ArgumentError, /rule 1 ends at week 26 but rule 2 starts at week 28 - each rule should start one week after the prior rule ends/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="218">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="219">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="220">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given an early-terminating rules array&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="221">
+          <span class="hits">3</span>
+          
+          <code class="ruby">  	it &quot;should raise an exception&quot; do expect { Piawe::RuleSet.new(early_terminated_rules_array) }.to raise_error( ArgumentError, /rule 3 has a terminating \+ sign, and should have been the last rule, however there was a subsequent rule: #{early_terminated_rules_array[3].inspect}/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="222">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="223">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="224">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given an un-terminated rules array&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="225">
+          <span class="hits">3</span>
+          
+          <code class="ruby">  	it &quot;should raise an exception&quot; do expect { Piawe::RuleSet.new(unterminated_rules_array) }.to raise_error( ArgumentError, /last rule must have a terminating \+ sign/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="226">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="227">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="228">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given a late starting rules array&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="229">
+          <span class="hits">3</span>
+          
+          <code class="ruby">  	it &quot;should raise an exception&quot; do expect { Piawe::RuleSet.new(late_starting_rules_array) }.to raise_error( ArgumentError, /rule 1 should start at week 1, but starts at week 10/ ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="230">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="231">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="232">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;given a valid rules array&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="233">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  	it &quot;should have the correct size&quot; 			 					do expect( valid.rules.size ).to eql(5); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="234">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  	it &quot;should have the correct start weeks&quot; 					do expect( valid.rules.map(	&amp;:start_week					)	).to match_array( [ 1, 27, 53, 80, 105							] ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="235">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  	it &quot;should have the correct end weeks&quot;   					do expect( valid.rules.map(	&amp;:end_week						) ).to match_array( [ 26, 52, 79, 104, nil						] ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="236">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  	it &quot;should have the correct percentage payables&quot; 	do expect( valid.rules.map(	&amp;:percentage_payable	) ).to match_array( [ 90, 80, 70, 60, 10							] ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="237">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  	it &quot;should have the correct overtime includeds&quot; 	do expect( valid.rules.map(	&amp;:overtime_included		) ).to match_array( [ true, true, true, false, false	] ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="238">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  	it &quot;should return the right early report line&quot;		do expect( valid.report_line(person,  report_date	).to_s 	).to eql( &#39;{:name=&gt;&quot;test person&quot;, :pay_for_this_week=&gt;&quot;1575.00&quot;, :weeks_since_injury=&gt;&quot;100.00&quot;, :hourly_rate=&gt;&quot;75.000000&quot;, :overtime_rate=&gt;&quot;150.000000&quot;, :normal_hours=&gt;&quot;35.00&quot;, :overtime_hours=&gt;&quot;5.00&quot;, :percentage_payable=&gt;&quot;60.00&quot;, :overtime_included=&gt;&quot;false&quot;}&#39; ); end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="239">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  	it &quot;should return the right late report line&quot;		  do expect( valid.report_line(person2, report_date	).to_s 	).to eql( &#39;{:name=&gt;&quot;test person 2&quot;, :pay_for_this_week=&gt;&quot;262.50&quot;, :weeks_since_injury=&gt;&quot;10000.00&quot;, :hourly_rate=&gt;&quot;75.000000&quot;, :overtime_rate=&gt;&quot;150.000000&quot;, :normal_hours=&gt;&quot;35.00&quot;, :overtime_hours=&gt;&quot;5.00&quot;, :percentage_payable=&gt;&quot;10.00&quot;, :overtime_included=&gt;&quot;false&quot;}&#39; ); end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="240">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="241">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="242">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="243">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="244">
+          
+          
+          <code class="ruby">end # describe RuleSet</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="245">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="246">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+      </div>
+    </div>
+  </body>
+</html>
