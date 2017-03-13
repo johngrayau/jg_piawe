@@ -174,6 +174,20 @@ describe RuleSet, :private do
 
 	let (:valid) do RuleSet.new( valid_rules_array ); end
 
+	let (:report_date) do 
+		Date.new(2017, 3, 1)
+	end
+
+	let (:person) do
+		Piawe::Person.played_by (	{
+			"name" =>  "test person",
+			"hourlyRate" =>  75.0,
+			"overtimeRate" =>  150.0,
+			"normalHours" =>  35.0,
+			"overtimeHours" =>  5,
+			"injuryDate" =>  (report_date - 100.weeks).strftime("%Y/%m/%d")
+		} )
+	end
 
 	context "given an invalid argument" do
 		it "should raise an exception" do expect { RuleSet.new("foo") }.to raise_error( ArgumentError, /rules array is required - got "foo"/ ); end
@@ -209,6 +223,7 @@ describe RuleSet, :private do
   	it "should have the correct end weeks"   					do expect( valid.rules.map(	&:end_week						) ).to match_array( [ 26, 52, 79, 104, nil						] ); end
   	it "should have the correct percentage payables" 	do expect( valid.rules.map(	&:percentage_payable	) ).to match_array( [ 90, 80, 70, 60, 10							] ); end
   	it "should have the correct overtime includeds" 	do expect( valid.rules.map(	&:overtime_included		) ).to match_array( [ true, true, true, false, false	] ); end
+  	it "should return the right report line"					do expect( valid.report_line(person, report_date	).to_s 	).to eql( '{:name=>"test person", :pay_for_this_week=>"1575.00", :weeks_since_injury=>"100.00", :hourly_rate=>"75.000000", :overtime_rate=>"150.000000", :normal_hours=>"35.00", :overtime_hours=>"5.00", :percentage_payable=>"60.00", :overtime_included=>false}' ); end
   end
 
 

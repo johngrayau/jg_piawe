@@ -18,7 +18,7 @@ class RuleSet
 
 
 	def report_line(person, report_date)
-		self.each do |rule|
+		rules.each do |rule|
 			return rule.report_line( person, report_date ) if rule.matches?( person.weeks_since_injury( report_date ) ) 
 		end # each rule_hash
 	end # method payment_report
