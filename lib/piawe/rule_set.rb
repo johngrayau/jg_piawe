@@ -8,7 +8,8 @@ class Piawe::RuleSet
 
 
 	# Create a new RuleSet to represent the rules contained in a rules array
-	# 
+	# The primary responsibiltiy of this class is to delegate rendering of a report line
+	# to the appropriate Rule
   #
   # ==== Parameters
   #
@@ -42,8 +43,7 @@ class Piawe::RuleSet
 
 
 	# Based on the included Rules, generate a report line for a given person at a given report date
-	# This is included in the RuleSet class for expedience - a cleaner separation of concerns could be 
-	# achieved by factoring this method into a report generator class, that calls a RuleSet.get_rule(person, report_date) method.
+	# by delegating to matching Rule objects
 	# 
   #
   # ==== Parameters
@@ -88,6 +88,7 @@ class Piawe::RuleSet
 
 
 		# role to be added to a rule hash
+		# The primary responsibility of this Role is to render a report line for a person and report date
 		role :Rule do
 
 			def start_week
